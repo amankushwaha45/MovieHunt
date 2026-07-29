@@ -88,19 +88,13 @@
     color:#fff;
 }
 
-/* Search Input */
+/* Search Input Only */
 
-.search-input,
-.search-box,
-input[type="search"],
-input[type="text"]{
-    color: #ffffff !important;
-    caret-color: #ffffff;
+.search-input{
+    color:#fff;
+    caret-color:#fff;
 }
 
-.search-input::placeholder,
-.search-box::placeholder,
-input[type="search"]::placeholder,
-input[type="text"]::placeholder{
-    color: #bdbdbd !important;
+.search-input::placeholder{
+    color:#bdbdbd;
 }

@@ -9,68 +9,78 @@ import "./SeatSelection.css";
 
 const buildFallbackShow = (id) => ({
 
-_id:id,
+    _id:id,
 
 
-movie:{
-    _id:"demo-movie",
-    title:"Demo Movie",
-    language:"Hindi",
-    format:"2D",
-    duration:"2h 20m",
-    certificate:"UA"
-},
+    movie:{
+        _id:"demo-movie",
+        title:"Demo Movie",
+        language:"Hindi",
+        format:"2D",
+        duration:"2h 20m",
+        certificate:"UA"
+    },
 
 
-theatre:{
-    _id:"demo-theatre",
-    name:"Cinepolis",
-    address:"MG Road",
+    theatre:{
+        _id:"demo-theatre",
+        name:"Cinepolis",
+        address:"MG Road",
 
-    screens:[
-        {
-            seatLayout:[
-                {
-                    category:"Silver",
-                    price:220,
-                    seats:[
-                        "A1",
-                        "A2",
-                        "A3",
-                        "A4",
-                        "A5",
-                        "A6"
-                    ]
-                },
+        screens:[
+            {
+                screenName:"Screen 1",
+
+                seatLayout:[
+
+                    {
+                        category:"Classic",
+                        price:220,
+                        seats:[
+                            "A1","A2","A3","A4","A5","A6"
+                        ]
+                    },
 
 
-                {
-                    category:"Gold",
-                    price:320,
-                    seats:[
-                        "B1",
-                        "B2",
-                        "B3",
-                        "B4",
-                        "B5",
-                        "B6"
-                    ]
-                }
-            ]
-        }
-    ]
-},
+                    {
+                        category:"Prime",
+                        price:280,
+                        seats:[
+                            "B1","B2","B3","B4","B5","B6"
+                        ]
+                    },
 
 
-screen:"Screen 1",
+                    {
+                        category:"Royal Club",
+                        price:350,
+                        seats:[
+                            "C1","C2","C3","C4","C5","C6"
+                        ]
+                    },
 
-time:"7:30 PM",
 
-bookedSeats:[],
+                    {
+                        category:"Recliner",
+                        price:450,
+                        seats:[
+                            "D1","D2","D3","D4"
+                        ]
+                    }
+
+                ]
+            }
+        ]
+    },
+
+
+    screen:"Screen 1",
+
+    time:"7:30 PM",
+
+    bookedSeats:[]
 
 });
-
-
 
 
 
@@ -82,6 +92,7 @@ function SeatSelection(){
 
 
 const {id}=useParams();
+
 
 const navigate=useNavigate();
 
@@ -101,17 +112,11 @@ const [loading,setLoading]=useState(true);
 
 
 
-
-
 useEffect(()=>{
 
-
-fetchShow();
-
+    fetchShow();
 
 },[]);
-
-
 
 
 
@@ -208,16 +213,7 @@ setLoading(false);
 
 
 };
-
-
-
-
-
-
-
-
-
-const selectSeat=(seat)=>{
+const selectSeat = (seat)=>{
 
 
 if(show.bookedSeats?.includes(seat))
@@ -259,7 +255,6 @@ seat
 }
 
 
-
 };
 
 
@@ -269,17 +264,18 @@ seat
 
 
 
-
-const calculatePrice=()=>{
-
-
-let total=0;
+const calculatePrice = ()=>{
 
 
+let total = 0;
 
-const layout=
+
+
+
+const layout =
 
 show?.theatre?.screens?.[0]?.seatLayout || [];
+
 
 
 
@@ -307,6 +303,8 @@ total += section.price;
 
 
 
+
+
 return total;
 
 
@@ -319,8 +317,7 @@ return total;
 
 
 
-
-const bookSeats=()=>{
+const bookSeats = ()=>{
 
 
 if(selectedSeats.length===0)
@@ -331,19 +328,25 @@ return;
 
 
 
+
 const bookingData={
+
 
 
 movie:show.movie._id,
 
 
+
 theatre:show.theatre._id,
+
 
 
 showtime:show._id || id,
 
 
+
 seats:selectedSeats,
+
 
 
 totalAmount:calculatePrice(),
@@ -406,7 +409,64 @@ navigate("/addons");
 
 
 
-const renderSeats=(section)=>{
+
+const getSortedLayout = ()=>{
+
+
+const layout =
+
+show?.theatre?.screens?.[0]?.seatLayout || [];
+
+
+
+
+const order={
+
+
+"Classic":1,
+
+"Prime":2,
+
+"Royal Club":3,
+
+"Recliner":4,
+
+
+
+"Silver":1,
+
+"Gold":2
+
+
+};
+
+
+
+
+
+return [...layout].sort((a,b)=>{
+
+
+return (
+
+order[a.category] || 999
+
+)
+
+-
+
+(
+
+order[b.category] || 999
+
+);
+
+
+});
+
+
+};
+const renderSeats = (section)=>{
 
 
 const rows={};
@@ -424,9 +484,7 @@ if(!rows[row])
 rows[row]=[];
 
 
-
 rows[row].push(seat);
-
 
 
 });
@@ -435,10 +493,7 @@ rows[row].push(seat);
 
 
 
-
-
 return Object.keys(rows).map(row=>(
-
 
 
 <div
@@ -455,7 +510,6 @@ key={row}
 {row}
 
 </span>
-
 
 
 
@@ -479,7 +533,6 @@ Math.ceil(rows[row].length/2)
 .map(seat=>(
 
 
-
 <SeatButton
 
 key={seat}
@@ -496,11 +549,11 @@ selectSeat={selectSeat}
 />
 
 
-
 ))
 
 
 }
+
 
 
 </div>
@@ -509,9 +562,7 @@ selectSeat={selectSeat}
 
 
 
-
 <div className="gap"></div>
-
 
 
 
@@ -533,7 +584,6 @@ Math.ceil(rows[row].length/2)
 .map(seat=>(
 
 
-
 <SeatButton
 
 key={seat}
@@ -550,7 +600,6 @@ selectSeat={selectSeat}
 />
 
 
-
 ))
 
 
@@ -562,13 +611,10 @@ selectSeat={selectSeat}
 
 
 
-
-
 </div>
 
 
 ));
-
 
 
 };
@@ -581,26 +627,39 @@ selectSeat={selectSeat}
 
 
 
-
 if(loading)
 
-return <h2>Loading...</h2>;
+return (
+
+<h2>
+
+Loading...
+
+</h2>
+
+);
 
 
 
 if(!show)
 
-return <h2>No Show Found</h2>;
+return (
+
+<h2>
+
+No Show Found
+
+</h2>
+
+);
 
 
 
 
 
+const layout=getSortedLayout();
 
 
-const layout=
-
-show.theatre?.screens?.[0]?.seatLayout || [];
 
 
 
@@ -617,6 +676,8 @@ return(
 
 
 
+
+
 <div className="seat-header">
 
 
@@ -625,6 +686,19 @@ return(
 {show.movie?.title}
 
 </h1>
+
+
+
+<p>
+
+{show.movie?.language}
+
+ |
+
+{show.movie?.format}
+
+</p>
+
 
 
 <p>
@@ -637,9 +711,14 @@ return(
 
 <p>
 
-{show.screen} | {show.time}
+{show.screen}
+
+ |
+
+{show.time}
 
 </p>
+
 
 
 </div>
@@ -654,7 +733,9 @@ return(
 
 <div className="screen">
 
+
 SCREEN
+
 
 </div>
 
@@ -665,7 +746,9 @@ SCREEN
 
 
 
+
 <div className="seat-wrapper">
+
 
 
 {
@@ -686,9 +769,12 @@ key={section.category}
 
 {section.category}
 
+&nbsp;
+
 ₹{section.price}
 
 </h3>
+
 
 
 
@@ -704,7 +790,6 @@ renderSeats(section)
 </div>
 
 
-
 ))
 
 
@@ -713,15 +798,6 @@ renderSeats(section)
 
 
 </div>
-
-
-
-
-
-
-
-
-
 <div className="legend">
 
 
@@ -741,7 +817,7 @@ renderSeats(section)
 
 <span>
 
-🟦 Selected
+🟥 Selected
 
 </span>
 
@@ -755,12 +831,10 @@ renderSeats(section)
 
 
 
-
 <div className="bottom-bar">
 
 
 <div>
-
 
 Seats :
 
@@ -772,6 +846,7 @@ Seats :
 
 
 </div>
+
 
 
 
@@ -797,24 +872,23 @@ onClick={bookSeats}
 
 >
 
-
 Continue
-
 
 </button>
 
 
 
 
-</div>
-
-
-
-
-
 
 </div>
 
+
+
+
+
+
+
+</div>
 
 
 );
@@ -840,18 +914,18 @@ selectedSeats,
 
 selectSeat
 
-
 }){
 
 
-return(
 
+return(
 
 
 <button
 
 
 className={
+
 
 show.bookedSeats?.includes(seat)
 
@@ -861,6 +935,7 @@ show.bookedSeats?.includes(seat)
 
 
 :
+
 
 selectedSeats.includes(seat)
 
@@ -874,6 +949,7 @@ selectedSeats.includes(seat)
 "available"
 
 
+
 }
 
 
@@ -881,7 +957,9 @@ selectedSeats.includes(seat)
 onClick={()=>selectSeat(seat)}
 
 
+
 >
+
 
 
 {seat.substring(1)}
@@ -896,6 +974,11 @@ onClick={()=>selectSeat(seat)}
 
 
 }
+
+
+
+
+
 
 
 

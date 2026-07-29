@@ -4,24 +4,11 @@ import API from "../../api/api";
 
 import "./MyBookings.css";
 
-
-
-
-
 function MyBookings(){
-
-
 
 const [bookings,setBookings] = useState([]);
 
 const [loading,setLoading] = useState(true);
-
-
-
-
-
-
-
 
 useEffect(()=>{
 
@@ -30,14 +17,6 @@ fetchBookings();
 
 
 },[]);
-
-
-
-
-
-
-
-
 
 const fetchBookings = async()=>{
 
@@ -112,14 +91,6 @@ setLoading(false);
 
 
 };
-
-
-
-
-
-
-
-
 
 if(loading){
 
@@ -278,18 +249,7 @@ booking.createdAt
 
 </p>
 
-
-
-
-
 </div>
-
-
-
-
-
-
-
 <div className="ticket-footer">
 
 
@@ -300,27 +260,10 @@ Booking ID:
 
 </div>
 
-
-
-
-
-
 </div>
 
-
-
 ))
-
-
-
 }
-
-
-
-
-
-
-
 </div>
 
 

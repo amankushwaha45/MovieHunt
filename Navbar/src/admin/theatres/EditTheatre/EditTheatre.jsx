@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import {
     FaArrowLeft,
     FaSave,
-    FaPlus,
     FaTrash
 } from "react-icons/fa";
 
@@ -12,512 +11,294 @@ import {
     useParams
 } from "react-router-dom";
 
-
 import API from "../../../api/api";
-
 
 import "./EditTheatre.css";
 
-
-
-
-
 function EditTheatre(){
 
+    const navigate = useNavigate();
+    const { id } = useParams();
 
+    const [loading,setLoading] = useState(false);
+    const [fetching,setFetching] = useState(true);
+    const [error,setError] = useState("");
 
-const navigate = useNavigate();
+    const [theatre,setTheatre] = useState({
 
-const {id} = useParams();
+        name:"",
+        city:"",
+        address:""
 
+    });
 
+    const [screens,setScreens] = useState([]);
 
+    useEffect(()=>{
 
+        getTheatre();
 
-const [theatre,setTheatre] = useState({
+    },[]);
 
-name:"",
+    const getTheatre = async()=>{
 
-city:"",
+        try{
 
-address:""
+            const res = await API.get("/theatres");
 
-});
+            const data = res.data.theatres.find(
 
+                item=>item._id===id
 
+            );
 
+            if(data){
 
-const [screens,setScreens] = useState([]);
+                setTheatre({
 
-const [loading,setLoading] = useState(false);
+                    name:data.name,
 
-const [fetching,setFetching] = useState(true);
+                    city:data.city,
 
-const [error,setError] = useState("");
+                    address:data.address
 
+                });
 
+                setScreens(data.screens || []);
 
+            }
 
+        }
 
+        catch(err){
 
+            console.log(err);
 
+        }
 
+        finally{
 
-useEffect(()=>{
+            setFetching(false);
 
+        }
 
-getTheatre();
+    };
 
+    const handleChange=(e)=>{
 
-},[]);
+        setTheatre({
 
+            ...theatre,
 
+            [e.target.name]:e.target.value
 
+        });
 
+    };
 
+    const handleScreenChange=(index,value)=>{
 
+        const data=[...screens];
 
+        data[index].screenName=value;
 
+        setScreens(data);
 
-const getTheatre = async()=>{
+    };
 
+    const handleSeatChange=(screenIndex,seatIndex,key,value)=>{
 
-try{
+        const data=[...screens];
 
+        data[screenIndex]
 
-const res = await API.get(
+        .seatLayout[seatIndex][key]=value;
 
-`/theatres`
+        setScreens(data);
 
-);
+    };
 
+    const addScreen=()=>{
 
+        setScreens([
 
+            ...screens,
 
-const data = res.data.theatres.find(
+            {
 
-(item)=>item._id===id
+                screenName:`Screen ${screens.length+1}`,
 
-);
+                seatLayout:[
 
+                    {
 
+                        category:"Classic",
 
+                        price:"",
 
-if(data){
+                        seats:[]
 
+                    },
 
-setTheatre({
+                    {
 
-name:data.name,
+                        category:"Prime",
 
-city:data.city,
+                        price:"",
 
-address:data.address
+                        seats:[]
 
-});
+                    },
 
+                    {
 
+                        category:"Royal Club",
 
-setScreens(
+                        price:"",
 
-data.screens || []
+                        seats:[]
 
-);
+                    },
 
+                    {
 
-}
+                        category:"Recliner",
 
+                        price:"",
 
+                        seats:[]
 
-}
+                    }
 
+                ]
 
+            }
 
-catch(err){
+        ]);
 
+    };
 
-console.log(err);
+    const deleteScreen=(index)=>{
 
+        const data=[...screens];
 
-}
+        data.splice(index,1);
 
+        setScreens(data);
 
+    };
+    const saveChanges = async (e) => {
 
-finally{
+    e.preventDefault();
 
+    try{
 
-setFetching(false);
+        setLoading(true);
 
+        setError("");
 
-}
+        const payload = {
 
+            ...theatre,
 
+            screens:screens.map((screen)=>({
+
+                screenName:screen.screenName,
+
+                seatLayout:screen.seatLayout.map((seat)=>({
+
+                    category:seat.category,
+
+                    price:Number(seat.price),
+
+                    seats:Array.isArray(seat.seats)
+
+                    ?
+
+                    seat.seats
+
+                    :
+
+                    seat.seats
+                    .split(",")
+
+                    .map(item=>item.trim())
+
+                    .filter(Boolean)
+
+                }))
+
+            }))
+
+        };
+
+        const res = await API.put(
+
+            `/theatres/${id}`,
+
+            payload
+
+        );
+
+        if(res.data.success){
+
+            alert(
+
+                "Theatre Updated Successfully"
+
+            );
+
+            navigate(
+
+                "/admin/theatres"
+
+            );
+
+        }
+
+    }
+
+    catch(err){
+
+        console.log(err);
+
+        setError(
+
+            err.response?.data?.message ||
+
+            "Update Failed"
+
+        );
+
+    }
+
+    finally{
+
+        setLoading(false);
+
+    }
 
 };
-
-
-
-
-
-
-
-
-
-const handleChange=(e)=>{
-
-
-setTheatre({
-
-...theatre,
-
-[e.target.name]:e.target.value
-
-});
-
-
-};
-
-
-
-
-
-
-
-
-
-const handleScreenChange=(index,value)=>{
-
-
-const data=[...screens];
-
-
-data[index].screenName=value;
-
-
-setScreens(data);
-
-
-};
-
-
-
-
-
-
-
-
-
-const handleSeatChange=(screenIndex,seatIndex,key,value)=>{
-
-
-const data=[...screens];
-
-
-data[screenIndex]
-
-.seatLayout[seatIndex][key]=value;
-
-
-setScreens(data);
-
-
-};
-
-
-
-
-
-
-
-
-
-const addScreen=()=>{
-
-
-setScreens([
-
-...screens,
-
-
-{
-
-screenName:"New Screen",
-
-seatLayout:[
-
-{
-
-category:"",
-
-price:"",
-
-seats:[]
-
-}
-
-]
-
-}
-
-
-]);
-
-
-};
-
-
-
-
-
-
-
-
-
-const addCategory=(screenIndex)=>{
-
-
-const data=[...screens];
-
-
-data[screenIndex]
-
-.seatLayout.push({
-
-category:"",
-
-price:"",
-
-seats:[]
-
-});
-
-
-
-setScreens(data);
-
-
-};
-
-
-
-
-
-
-
-
-
-const deleteScreen=(index)=>{
-
-
-const data=[...screens];
-
-
-data.splice(index,1);
-
-
-setScreens(data);
-
-
-};
-
-
-
-
-
-
-
-
-
-const saveChanges=async(e)=>{
-
-
-e.preventDefault();
-
-
-
-try{
-
-
-setLoading(true);
-
-
-setError("");
-
-
-
-
-
-const payload={
-
-
-...theatre,
-
-
-screens:screens.map((screen)=>({
-
-screenName:screen.screenName,
-
-
-seatLayout:screen.seatLayout.map((seat)=>({
-
-category:seat.category,
-
-
-price:Number(seat.price),
-
-
-seats:Array.isArray(seat.seats)
-
-?
-
-seat.seats
-
-:
-
-seat.seats.split(",")
-.map(item=>item.trim())
-
-
-}))
-
-
-}))
-
-
-};
-
-
-
-
-
-
-
-
-const res = await API.put(
-
-`/theatres/${id}`,
-
-payload
-
-);
-
-
-
-
-
-
-if(res.data.success){
-
-
-alert(
-
-"Theatre Updated Successfully"
-
-);
-
-
-
-navigate(
-
-"/admin/theatres"
-
-);
-
-
-}
-
-
-
-}
-
-
-
-catch(err){
-
-
-console.log(
-
-"UPDATE ERROR",
-
-err
-
-);
-
-
-setError(
-
-err.response?.data?.message ||
-
-"Update Failed"
-
-);
-
-
-
-}
-
-
-
-finally{
-
-
-setLoading(false);
-
-
-}
-
-
-
-};
-
-
-
-
-
-
-
-
 
 if(fetching){
 
+    return(
 
-return(
+        <h2 className="loading">
 
-<h2 className="loading">
+            Loading Theatre...
 
-Loading Theatre...
+        </h2>
 
-</h2>
-
-);
-
+    );
 
 }
 
-
-
-
-
-
-
-
-
-
 return(
-
-
 
 <div className="edit-theatre-page">
 
-
-
-
-
-
-
 <div className="edit-header">
-
-
 
 <button
 
@@ -531,28 +312,13 @@ Back
 
 </button>
 
-
-
-
-
 <h1>
 
 Edit Theatre
 
 </h1>
 
-
-
-
 </div>
-
-
-
-
-
-
-
-
 
 <form
 
@@ -561,13 +327,6 @@ className="theatre-form"
 onSubmit={saveChanges}
 
 >
-
-
-
-
-
-
-
 
 <input
 
@@ -581,12 +340,6 @@ placeholder="Theatre Name"
 
 />
 
-
-
-
-
-
-
 <input
 
 name="city"
@@ -598,13 +351,6 @@ onChange={handleChange}
 placeholder="City"
 
 />
-
-
-
-
-
-
-
 
 <textarea
 
@@ -618,32 +364,14 @@ placeholder="Address"
 
 />
 
-
-
-
-
-
-
-
-
-
 <h2>
 
 Screens
 
 </h2>
-
-
-
-
-
-
-
 {
 
 screens.map((screen,index)=>(
-
-
 
 <div
 
@@ -653,22 +381,13 @@ key={index}
 
 >
 
-
-
-
-
-
-
 <div className="screen-title">
-
 
 <h3>
 
 Screen {index+1}
 
 </h3>
-
-
 
 <button
 
@@ -682,16 +401,11 @@ onClick={()=>deleteScreen(index)}
 
 </button>
 
-
 </div>
 
-
-
-
-
-
-
 <input
+
+placeholder="Screen Name"
 
 value={screen.screenName}
 
@@ -707,23 +421,11 @@ e.target.value
 
 }
 
-placeholder="Screen Name"
-
 />
-
-
-
-
-
-
-
-
 
 {
 
-screen.seatLayout?.map((seat,sIndex)=>(
-
-
+screen.seatLayout.map((seat,sIndex)=>(
 
 <div
 
@@ -733,49 +435,45 @@ key={sIndex}
 
 >
 
+{/* Fixed Category */}
 
+<div
 
+className="category-label"
 
+style={{
 
+width:"170px",
 
+padding:"12px",
 
-<input
+background:"#181818",
 
-value={seat.category}
+border:"1px solid #333",
 
-placeholder="Category"
+borderRadius:"8px",
 
-onChange={(e)=>
+color:"#ff004f",
 
-handleSeatChange(
+fontWeight:"700",
 
-index,
+textAlign:"center"
 
-sIndex,
+}}
 
-"category",
+>
 
-e.target.value
+{seat.category}
 
-)
-
-}
-
-/>
-
-
-
-
-
-
+</div>
 
 <input
 
 type="number"
 
-value={seat.price}
+placeholder={`${seat.category} Price`}
 
-placeholder="Price"
+value={seat.price}
 
 onChange={(e)=>
 
@@ -795,14 +493,9 @@ e.target.value
 
 />
 
-
-
-
-
-
-
-
 <input
+
+placeholder={`${seat.category} Seats (A1,A2,A3...)`}
 
 value={
 
@@ -817,8 +510,6 @@ seat.seats.join(",")
 seat.seats
 
 }
-
-placeholder="A1,A2,A3"
 
 onChange={(e)=>
 
@@ -838,65 +529,188 @@ e.target.value
 
 />
 
-
-
-
-
-
-
 </div>
-
-
 
 ))
 
-
 }
 
+</div>
 
+))
 
+}
+{
 
+screens.map((screen,index)=>(
 
+<div
 
+className="screen-box"
+
+key={index}
+
+>
+
+<div className="screen-title">
+
+<h3>
+
+Screen {index+1}
+
+</h3>
 
 <button
 
 type="button"
 
-onClick={()=>addCategory(index)}
+onClick={()=>deleteScreen(index)}
 
 >
 
-<FaPlus/>
-
-Add Category
+<FaTrash/>
 
 </button>
 
-
-
-
-
-
-
-
 </div>
 
+<input
 
+placeholder="Screen Name"
 
-))
+value={screen.screenName}
 
+onChange={(e)=>
+
+handleScreenChange(
+
+index,
+
+e.target.value
+
+)
 
 }
 
+/>
 
+{
 
+screen.seatLayout.map((seat,sIndex)=>(
 
+<div
 
+className="seat-box"
 
+key={sIndex}
 
+>
 
+{/* Fixed Category */}
 
+<div
+
+className="category-label"
+
+style={{
+
+width:"170px",
+
+padding:"12px",
+
+background:"#181818",
+
+border:"1px solid #333",
+
+borderRadius:"8px",
+
+color:"#ff004f",
+
+fontWeight:"700",
+
+textAlign:"center"
+
+}}
+
+>
+
+{seat.category}
+
+</div>
+
+<input
+
+type="number"
+
+placeholder={`${seat.category} Price`}
+
+value={seat.price}
+
+onChange={(e)=>
+
+handleSeatChange(
+
+index,
+
+sIndex,
+
+"price",
+
+e.target.value
+
+)
+
+}
+
+/>
+
+<input
+
+placeholder={`${seat.category} Seats (A1,A2,A3...)`}
+
+value={
+
+Array.isArray(seat.seats)
+
+?
+
+seat.seats.join(",")
+
+:
+
+seat.seats
+
+}
+
+onChange={(e)=>
+
+handleSeatChange(
+
+index,
+
+sIndex,
+
+"seats",
+
+e.target.value
+
+)
+
+}
+
+/>
+
+</div>
+
+))
+
+}
+
+</div>
+
+))
+
+}
 <button
 
 type="button"
@@ -905,18 +719,9 @@ onClick={addScreen}
 
 >
 
-<FaPlus/>
-
 Add Screen
 
 </button>
-
-
-
-
-
-
-
 
 {
 
@@ -930,17 +735,13 @@ error &&
 
 }
 
-
-
-
-
-
-
 <button
 
 className="save-btn"
 
 disabled={loading}
+
+type="submit"
 
 >
 
@@ -960,35 +761,14 @@ loading
 
 }
 
-
-
 </button>
-
-
-
-
-
-
-
-
 
 </form>
 
-
-
-
-
-
-
 </div>
-
-
 
 );
 
-
 }
-
-
 
 export default EditTheatre;
