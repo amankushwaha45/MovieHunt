@@ -12,7 +12,7 @@ import {
 
 import { useNavigate } from "react-router-dom";
 import API from "../../api/api";
-import "./Profile.css";
+import "./profile.css";
 
 function Profile() {
   const navigate = useNavigate();

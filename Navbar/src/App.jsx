@@ -84,7 +84,7 @@ import UserList from "./admin/users/UserList/UserList";
 // ADMIN PROFILE
 // =====================
 
-import Profile from "./admin/profile/Profile";
+import Profile from "./admin/profile/profile";
 
 function App() {
   return (
