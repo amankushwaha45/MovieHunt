@@ -1,4 +1,4 @@
-const Seat = require("../models/Seat");
+const Seat = require("../models/seat");
 
 
 const getSeatsByShow = async (req, res) => {
