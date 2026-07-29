@@ -1,0 +1,655 @@
+/* ======================================
+   USER LIST PAGE
+   NETFLIX MAROON GLASS UI
+====================================== */
+
+
+.user-page{
+
+    min-height:100vh;
+
+    padding:35px;
+
+    color:white;
+
+
+    background:
+
+    radial-gradient(
+        circle at top left,
+        rgba(128,0,32,.35),
+        transparent 35%
+    ),
+
+    linear-gradient(
+        135deg,
+        #050505,
+        #111
+    );
+
+}
+
+
+
+
+
+
+
+/* =========================
+        HEADER
+========================= */
+
+
+.user-header{
+
+    margin-bottom:35px;
+
+}
+
+
+.user-header h1{
+
+    font-size:34px;
+
+    font-weight:800;
+
+    margin:0;
+
+}
+
+
+
+.user-header p{
+
+    color:#aaa;
+
+    margin-top:8px;
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+        TABLE BOX
+========================= */
+
+
+.user-table-box{
+
+
+    width:100%;
+
+
+    overflow-x:auto;
+
+
+    padding:30px;
+
+
+
+    border-radius:28px;
+
+
+
+    background:
+
+    linear-gradient(
+
+        145deg,
+
+        rgba(255,255,255,.08),
+
+        rgba(255,255,255,.03)
+
+    );
+
+
+
+    border:
+
+    1px solid rgba(255,255,255,.12);
+
+
+
+    backdrop-filter:
+
+    blur(25px);
+
+
+
+    box-shadow:
+
+    0 30px 80px rgba(0,0,0,.8);
+
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+        TABLE
+========================= */
+
+
+.user-table-box table{
+
+
+    width:100%;
+
+
+    border-collapse:collapse;
+
+
+}
+
+
+
+
+.user-table-box th{
+
+
+    padding:18px;
+
+
+    text-align:left;
+
+
+    color:#f3b0bb;
+
+
+    text-transform:uppercase;
+
+
+    font-size:13px;
+
+
+
+    border-bottom:
+
+    1px solid rgba(255,255,255,.15);
+
+
+}
+
+
+
+
+
+
+
+.user-table-box td{
+
+
+    padding:18px;
+
+
+    color:#ddd;
+
+
+
+    border-bottom:
+
+    1px solid rgba(255,255,255,.08);
+
+
+}
+
+
+
+
+
+
+
+
+.user-table-box tbody tr{
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+.user-table-box tbody tr:hover{
+
+
+    background:
+
+    rgba(128,0,32,.15);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+        USER NAME
+========================= */
+
+
+.user-name{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:12px;
+
+
+}
+
+
+
+
+.avatar{
+
+
+    height:40px;
+
+
+    width:40px;
+
+
+    border-radius:50%;
+
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+
+    color:white;
+
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #3b0715,
+
+        #8b1e3f
+
+    );
+
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+        ROLE BADGE
+========================= */
+
+
+.role{
+
+
+    padding:7px 15px;
+
+
+    border-radius:30px;
+
+
+    font-size:12px;
+
+
+    font-weight:700;
+
+
+
+    color:#f3b0bb;
+
+
+
+    background:
+
+    rgba(128,0,32,.25);
+
+
+
+    border:
+
+    1px solid rgba(183,110,121,.4);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+        STATUS
+========================= */
+
+
+.active{
+
+
+    padding:7px 15px;
+
+
+    border-radius:30px;
+
+
+    font-size:12px;
+
+
+    font-weight:700;
+
+
+
+    color:#4ade80;
+
+
+
+    background:
+
+    rgba(34,197,94,.15);
+
+
+
+    border:
+
+    1px solid rgba(34,197,94,.3);
+
+
+}
+
+
+
+
+
+
+
+.blocked{
+
+
+    padding:7px 15px;
+
+
+    border-radius:30px;
+
+
+    font-size:12px;
+
+
+    font-weight:700;
+
+
+
+    color:#ff6b6b;
+
+
+
+    background:
+
+    rgba(239,68,68,.15);
+
+
+
+    border:
+
+    1px solid rgba(239,68,68,.3);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+        BUTTONS
+========================= */
+
+
+.role-btn,
+.delete-btn{
+
+
+    height:40px;
+
+
+    width:40px;
+
+
+
+    border:none;
+
+
+
+    border-radius:12px;
+
+
+
+    color:white;
+
+
+
+    cursor:pointer;
+
+
+
+    margin-right:8px;
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+
+
+.role-btn{
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #374151,
+
+        #6b7280
+
+    );
+
+
+}
+
+
+
+
+
+
+
+.delete-btn{
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #4b0710,
+
+        #8b1e3f
+
+    );
+
+
+}
+
+
+
+
+
+
+
+
+.role-btn:hover,
+.delete-btn:hover{
+
+
+    transform:
+
+    translateY(-4px)
+    scale(1.08);
+
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+        EMPTY
+========================= */
+
+
+.user-table-box td[colspan]{
+
+
+    text-align:center;
+
+
+    padding:50px;
+
+
+    color:#aaa;
+
+
+    font-size:18px;
+
+
+}
+
+
+
+
+
+
+
+
+.loading{
+
+
+    color:white;
+
+
+    text-align:center;
+
+
+    margin-top:100px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+        MOBILE
+========================= */
+
+
+@media(max-width:700px){
+
+
+.user-page{
+
+    padding:20px;
+
+}
+
+
+
+.user-header h1{
+
+    font-size:26px;
+
+}
+
+
+
+.user-table-box{
+
+    padding:15px;
+
+}
+
+
+
+.user-table-box th,
+.user-table-box td{
+
+    padding:12px;
+
+    font-size:13px;
+
+}
+
+
+
+}

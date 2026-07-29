@@ -1,0 +1,873 @@
+/* ======================================
+   EDIT THEATRE PAGE
+   NETFLIX MAROON GLASS UI
+====================================== */
+
+
+.edit-theatre-page{
+
+
+    min-height:100vh;
+
+
+    padding:40px;
+
+
+    color:white;
+
+
+
+    background:
+
+
+    radial-gradient(
+
+        circle at top left,
+
+        rgba(128,0,32,.35),
+
+        transparent 35%
+
+    ),
+
+
+    linear-gradient(
+
+        135deg,
+
+        #050505,
+
+        #111
+
+    );
+
+
+}
+
+
+
+
+
+
+
+
+/* ===========================
+        HEADER
+=========================== */
+
+
+.edit-header{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:25px;
+
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+
+
+
+
+.edit-header h1{
+
+
+    font-size:34px;
+
+
+    font-weight:800;
+
+
+    letter-spacing:1px;
+
+
+}
+
+
+
+
+
+
+
+
+.edit-header button{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:10px;
+
+
+
+    padding:12px 20px;
+
+
+
+    border:none;
+
+
+
+    border-radius:15px;
+
+
+
+    color:white;
+
+
+
+    cursor:pointer;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.08);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.15);
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+
+
+
+.edit-header button:hover{
+
+
+    background:
+
+
+    rgba(128,0,32,.5);
+
+
+
+    transform:
+
+
+    translateX(-5px);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ===========================
+        FORM
+=========================== */
+
+
+.theatre-form{
+
+
+    max-width:950px;
+
+
+    padding:35px;
+
+
+
+    border-radius:30px;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.06);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.12);
+
+
+
+    backdrop-filter:
+
+
+    blur(25px);
+
+
+
+    -webkit-backdrop-filter:
+
+
+    blur(25px);
+
+
+
+    box-shadow:
+
+
+    0 30px 80px rgba(0,0,0,.8);
+
+
+}
+
+
+
+
+
+
+
+.theatre-form h2{
+
+
+    margin:35px 0 20px;
+
+
+    color:#f3b0bb;
+
+
+    font-size:25px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ===========================
+        INPUTS
+=========================== */
+
+
+.theatre-form input,
+.theatre-form textarea{
+
+
+    width:100%;
+
+
+    padding:16px 18px;
+
+
+    margin-bottom:18px;
+
+
+
+    color:white;
+
+
+
+    outline:none;
+
+
+
+    border-radius:16px;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.07);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.15);
+
+
+}
+
+
+
+
+
+.theatre-form textarea{
+
+
+    height:120px;
+
+
+    resize:none;
+
+
+}
+
+
+
+
+
+
+.theatre-form input:focus,
+.theatre-form textarea:focus{
+
+
+    border-color:#8b1e3f;
+
+
+
+    box-shadow:
+
+
+    0 0 25px rgba(128,0,32,.4);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ===========================
+        SCREEN CARD
+=========================== */
+
+
+.screen-box{
+
+
+    padding:25px;
+
+
+    margin-bottom:25px;
+
+
+
+    border-radius:25px;
+
+
+
+    background:
+
+
+    rgba(0,0,0,.35);
+
+
+
+    border:
+
+
+    1px solid rgba(183,110,121,.25);
+
+
+
+}
+
+
+
+
+
+
+
+.screen-title{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:space-between;
+
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+
+
+.screen-title h3{
+
+
+    color:#ffd1d8;
+
+
+    font-size:22px;
+
+
+}
+
+
+
+
+
+
+
+
+.screen-title button{
+
+
+    height:40px;
+
+
+    width:40px;
+
+
+
+    border:none;
+
+
+
+    border-radius:12px;
+
+
+
+    cursor:pointer;
+
+
+
+    color:white;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #4b0710,
+
+        #8b1e3f
+
+    );
+
+
+}
+
+
+
+
+
+
+
+.screen-title button:hover{
+
+
+    transform:
+
+
+    scale(1.1);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ===========================
+        SEAT CATEGORY
+=========================== */
+
+
+.seat-box{
+
+
+    display:grid;
+
+
+
+    grid-template-columns:
+
+
+    repeat(3,1fr);
+
+
+
+    gap:15px;
+
+
+
+    padding:20px;
+
+
+
+    margin-bottom:15px;
+
+
+
+    border-radius:18px;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.05);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.1);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ===========================
+        ADD BUTTONS
+=========================== */
+
+
+.screen-box > button,
+.seat-box + button{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+
+    gap:10px;
+
+
+
+    padding:12px 18px;
+
+
+
+    margin-bottom:20px;
+
+
+
+    border:none;
+
+
+
+    border-radius:15px;
+
+
+
+    cursor:pointer;
+
+
+
+    color:white;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #3b0715,
+
+        #8b1e3f
+
+    );
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+
+
+.screen-box > button:hover,
+.seat-box + button:hover{
+
+
+    transform:
+
+
+    translateY(-3px);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ===========================
+        SAVE BUTTON
+=========================== */
+
+
+.save-btn{
+
+
+    width:100%;
+
+
+    padding:16px;
+
+
+
+    margin-top:25px;
+
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+
+    gap:10px;
+
+
+
+    border:none;
+
+
+
+    border-radius:18px;
+
+
+
+    cursor:pointer;
+
+
+
+    color:white;
+
+
+
+    font-size:17px;
+
+
+
+    font-weight:700;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #3b0715,
+
+        #8b1e3f
+
+    );
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+
+
+.save-btn:hover{
+
+
+    transform:
+
+
+    translateY(-5px);
+
+
+
+    box-shadow:
+
+
+    0 20px 45px rgba(128,0,32,.5);
+
+
+}
+
+
+
+
+
+
+
+
+
+.error-msg{
+
+
+    color:#ff6b6b;
+
+
+    margin-top:15px;
+
+
+}
+
+
+
+
+
+
+
+
+
+.loading{
+
+
+    color:white;
+
+
+    text-align:center;
+
+
+    margin-top:100px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ===========================
+        MOBILE
+=========================== */
+
+
+@media(max-width:700px){
+
+
+.edit-theatre-page{
+
+
+    padding:20px;
+
+
+}
+
+
+
+.edit-header{
+
+
+    flex-direction:column;
+
+
+    align-items:flex-start;
+
+
+}
+
+
+
+.theatre-form{
+
+
+    padding:20px;
+
+
+}
+
+
+
+.seat-box{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+.edit-header h1{
+
+
+    font-size:26px;
+
+
+}
+
+
+
+}

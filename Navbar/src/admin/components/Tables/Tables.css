@@ -1,0 +1,383 @@
+/* ==================================
+   NETFLIX GLASS TABLE
+================================== */
+
+
+.tables-container{
+
+
+    margin-top:40px;
+
+
+}
+
+
+
+
+
+
+
+.table-card{
+
+
+    padding:30px;
+
+
+
+    border-radius:28px;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.05);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.12);
+
+
+
+    backdrop-filter:
+
+
+    blur(25px);
+
+
+
+    box-shadow:
+
+
+    0 25px 70px rgba(0,0,0,.7);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.table-header{
+
+
+    display:flex;
+
+
+
+    justify-content:space-between;
+
+
+
+    align-items:center;
+
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+.table-header h2{
+
+
+    color:white;
+
+
+
+    font-size:22px;
+
+
+
+}
+
+
+
+.table-header svg{
+
+
+    color:#8b1e3f;
+
+
+    font-size:25px;
+
+
+}
+
+
+
+
+
+
+
+
+
+.table-wrapper{
+
+
+    overflow-x:auto;
+
+
+}
+
+
+
+
+
+
+
+table{
+
+
+    width:100%;
+
+
+
+    border-collapse:collapse;
+
+
+}
+
+
+
+
+
+
+
+th{
+
+
+    padding:16px;
+
+
+
+    text-align:left;
+
+
+
+    color:#c9a0a8;
+
+
+
+    font-size:13px;
+
+
+
+    text-transform:uppercase;
+
+
+
+    letter-spacing:1px;
+
+
+
+    border-bottom:
+
+
+    1px solid rgba(255,255,255,.15);
+
+
+}
+
+
+
+
+
+
+
+td{
+
+
+    padding:16px;
+
+
+
+    color:#ddd;
+
+
+
+    border-bottom:
+
+
+    1px solid rgba(255,255,255,.08);
+
+
+}
+
+
+
+
+
+
+
+
+tbody tr{
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+
+
+tbody tr:hover{
+
+
+    background:
+
+
+    rgba(128,0,32,.15);
+
+
+
+    transform:
+
+
+    translateY(-2px);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* STATUS */
+
+
+.paid-status{
+
+
+    padding:7px 14px;
+
+
+
+    border-radius:20px;
+
+
+
+    color:#9be7b0;
+
+
+
+    background:
+
+
+    rgba(46,125,50,.18);
+
+
+
+    font-size:12px;
+
+
+
+}
+
+
+
+
+
+.pending-status{
+
+
+    padding:7px 14px;
+
+
+
+    border-radius:20px;
+
+
+
+    color:#e8c77b;
+
+
+
+    background:
+
+
+    rgba(180,130,40,.18);
+
+
+
+    font-size:12px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.no-data{
+
+
+    text-align:center;
+
+
+    padding:30px;
+
+
+    color:#888;
+
+
+}
+
+
+
+
+
+
+
+
+
+@media(max-width:700px){
+
+
+.table-card{
+
+
+    padding:15px;
+
+
+}
+
+
+
+th,td{
+
+
+    padding:12px;
+
+
+    font-size:12px;
+
+
+}
+
+
+
+}

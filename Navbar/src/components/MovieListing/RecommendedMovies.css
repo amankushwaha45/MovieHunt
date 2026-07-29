@@ -1,0 +1,234 @@
+
+.recommended-movies-section {
+  width: 100%;
+
+  padding:
+    55px
+    20px
+    70px;
+
+  background: #080808;
+
+  color: #ffffff;
+}
+
+
+.recommended-movies-container {
+  max-width: 1300px;
+
+  margin: 0 auto;
+}
+
+
+
+.recommended-movies-header {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+
+.recommended-movies-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #e50914;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+.recommended-movies-title {
+  position: relative;
+
+  margin: 0;
+
+  padding-bottom: 12px;
+
+  color: #ffffff;
+
+  font-size: 30px;
+
+  font-weight: 700;
+}
+
+
+.recommended-movies-title::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: 0;
+
+  width: 45px;
+
+  height: 3px;
+
+  background: #e50914;
+
+  border-radius: 10px;
+}
+
+
+.recommended-results-count {
+  color: #777783;
+
+  font-size: 13px;
+}
+
+
+
+.recommended-theater-filter {
+  margin-bottom: 30px;
+}
+
+
+
+
+.recommended-movies-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+
+.recommended-movie-item {
+  width: 100%;
+
+  min-width: 0;
+}
+
+
+
+
+.recommended-empty {
+  min-height: 250px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 16px;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+}
+
+
+.recommended-empty div {
+  margin-bottom: 12px;
+
+  font-size: 40px;
+}
+
+
+.recommended-empty h3 {
+  margin: 0;
+
+  font-size: 20px;
+}
+
+
+.recommended-empty p {
+  color: #777783;
+
+  font-size: 13px;
+}
+
+
+
+@media (max-width: 1200px) {
+
+  .recommended-movies-grid {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+  }
+
+}
+
+
+@media (max-width: 900px) {
+
+  .recommended-movies-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+  }
+
+
+  .recommended-movies-title {
+    font-size: 27px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .recommended-movies-section {
+    padding:
+      45px
+      15px
+      55px;
+  }
+
+
+  .recommended-movies-header {
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+
+  .recommended-movies-title {
+    font-size: 24px;
+  }
+
+
+  .recommended-movies-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+  }
+
+}
+
+
+@media (max-width: 380px) {
+
+  .recommended-movies-grid {
+    gap: 12px;
+  }
+
+
+  .recommended-movies-title {
+    font-size: 21px;
+  }
+
+}

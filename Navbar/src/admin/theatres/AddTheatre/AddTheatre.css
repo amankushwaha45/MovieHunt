@@ -1,0 +1,826 @@
+/* ======================================
+   ADD THEATRE PAGE
+   NETFLIX MAROON GLASS UI
+====================================== */
+
+
+.add-theatre-page{
+
+
+    min-height:100vh;
+
+
+    padding:40px;
+
+
+    color:white;
+
+
+
+    background:
+
+
+    radial-gradient(
+
+        circle at top left,
+
+        rgba(128,0,32,.3),
+
+        transparent 35%
+
+    ),
+
+
+
+    linear-gradient(
+
+        135deg,
+
+        #050505,
+
+        #111
+
+    );
+
+}
+
+
+
+
+
+
+
+/* ===========================
+        HEADER
+=========================== */
+
+
+.theatre-header{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:25px;
+
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+
+
+
+
+.theatre-header h1{
+
+
+    font-size:34px;
+
+
+    font-weight:800;
+
+
+    letter-spacing:1px;
+
+
+}
+
+
+
+
+
+
+
+.theatre-header button{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:10px;
+
+
+    padding:12px 20px;
+
+
+    border:none;
+
+
+    border-radius:15px;
+
+
+    cursor:pointer;
+
+
+    color:white;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.08);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.15);
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+.theatre-header button:hover{
+
+
+    background:
+
+
+    rgba(128,0,32,.5);
+
+
+
+    transform:
+
+
+    translateX(-5px);
+
+
+}
+
+
+
+
+
+
+
+
+/* ===========================
+        FORM CARD
+=========================== */
+
+
+.theatre-form{
+
+
+    max-width:950px;
+
+
+    padding:35px;
+
+
+    border-radius:30px;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.06);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.12);
+
+
+
+    backdrop-filter:
+
+
+    blur(25px);
+
+
+
+    box-shadow:
+
+
+    0 30px 80px rgba(0,0,0,.8);
+
+
+}
+
+
+
+
+
+
+
+.theatre-form h2{
+
+
+    margin:35px 0 20px;
+
+
+    font-size:25px;
+
+
+    color:#f1b0bb;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ===========================
+        INPUTS
+=========================== */
+
+
+.theatre-form input,
+.theatre-form textarea{
+
+
+    width:100%;
+
+
+    padding:16px 18px;
+
+
+    margin-bottom:18px;
+
+
+
+    border-radius:16px;
+
+
+    outline:none;
+
+
+    color:white;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.07);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.15);
+
+
+
+    font-size:15px;
+
+
+}
+
+
+
+
+
+
+
+.theatre-form textarea{
+
+
+    height:120px;
+
+
+    resize:none;
+
+
+}
+
+
+
+
+
+
+
+.theatre-form input::placeholder,
+.theatre-form textarea::placeholder{
+
+
+    color:#999;
+
+
+}
+
+
+
+
+
+
+
+.theatre-form input:focus,
+.theatre-form textarea:focus{
+
+
+    border-color:#8b1e3f;
+
+
+
+    box-shadow:
+
+
+    0 0 25px rgba(128,0,32,.4);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ===========================
+        SCREEN BOX
+=========================== */
+
+
+.screen-box{
+
+
+    padding:25px;
+
+
+    margin-bottom:25px;
+
+
+    border-radius:25px;
+
+
+
+    background:
+
+
+    rgba(0,0,0,.35);
+
+
+
+    border:
+
+
+    1px solid rgba(183,110,121,.25);
+
+
+
+}
+
+
+
+
+
+
+
+.screen-title{
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+
+
+.screen-title h3{
+
+
+    font-size:22px;
+
+
+    color:#ffd1d8;
+
+
+}
+
+
+
+
+
+
+
+.screen-title button{
+
+
+    height:38px;
+
+
+    width:38px;
+
+
+
+    border:none;
+
+
+    border-radius:12px;
+
+
+    cursor:pointer;
+
+
+    color:white;
+
+
+
+    background:
+
+
+    rgba(139,30,63,.8);
+
+
+}
+
+
+
+
+
+
+
+.screen-title button:hover{
+
+
+    transform:scale(1.1);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ===========================
+        SEAT BOX
+=========================== */
+
+
+.seat-box{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+
+    repeat(3,1fr);
+
+
+
+    gap:15px;
+
+
+    padding:20px;
+
+
+    margin-bottom:15px;
+
+
+
+    border-radius:18px;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.05);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.1);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ===========================
+        ADD BUTTONS
+=========================== */
+
+
+.theatre-form button{
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+
+
+.seat-box + button,
+.screen-box > button{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    gap:8px;
+
+
+
+    padding:12px 18px;
+
+
+
+    border:none;
+
+
+
+    border-radius:14px;
+
+
+
+    color:white;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #3b0715,
+
+        #8b1e3f
+
+    );
+
+
+
+    margin-bottom:20px;
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+
+
+.seat-box + button:hover,
+.screen-box > button:hover{
+
+
+    transform:
+
+
+    translateY(-3px);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ===========================
+        SAVE BUTTON
+=========================== */
+
+
+.save-btn{
+
+
+    width:100%;
+
+
+    padding:16px;
+
+
+
+    margin-top:25px;
+
+
+
+    border:none;
+
+
+
+    border-radius:18px;
+
+
+
+    color:white;
+
+
+
+    font-size:17px;
+
+
+
+    font-weight:700;
+
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    gap:10px;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #3b0715,
+
+        #8b1e3f
+
+    );
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+
+
+.save-btn:hover{
+
+
+    transform:
+
+
+    translateY(-5px);
+
+
+
+    box-shadow:
+
+
+    0 20px 45px rgba(128,0,32,.5);
+
+
+}
+
+
+
+
+
+
+
+
+
+.error-msg{
+
+
+    color:#ff6b6b;
+
+
+    margin:15px 0;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ===========================
+        RESPONSIVE
+=========================== */
+
+
+@media(max-width:700px){
+
+
+.add-theatre-page{
+
+
+    padding:20px;
+
+
+}
+
+
+
+.theatre-header{
+
+
+    flex-direction:column;
+
+
+    align-items:flex-start;
+
+
+}
+
+
+
+.theatre-form{
+
+
+    padding:20px;
+
+
+}
+
+
+
+.seat-box{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+}

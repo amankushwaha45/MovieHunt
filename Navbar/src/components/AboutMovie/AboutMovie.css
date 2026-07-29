@@ -1,0 +1,353 @@
+.about-movie {
+  position: relative;
+
+  width: 100%;
+
+  padding: 80px 20px;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(229, 9, 20, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(100, 60, 255, 0.06),
+      transparent 30%
+    ),
+    #080808;
+
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+
+.about-movie::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 80%;
+
+  height: 1px;
+
+  transform: translateX(-50%);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(229, 9, 20, 0.6),
+      transparent
+    );
+}
+
+
+
+.about-container {
+  position: relative;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 0 20px;
+}
+
+
+
+
+.about-container h2 {
+  position: relative;
+
+  display: inline-block;
+
+  margin: 0 0 25px;
+
+  color: #ffffff;
+
+  font-size: 32px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+
+
+
+.about-container h2::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -10px;
+
+  width: 55px;
+
+  height: 3px;
+
+  background: #e50914;
+
+  border-radius: 10px;
+}
+
+
+
+
+.about-container > p {
+  max-width: 950px;
+
+  margin: 0 0 45px;
+
+  color: #a1a1aa;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  letter-spacing: 0.1px;
+}
+
+
+
+.movie-details-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+
+
+.movie-details-grid > div {
+  position: relative;
+
+  min-height: 120px;
+
+  padding: 24px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 16px;
+
+  backdrop-filter: blur(15px);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+
+.movie-details-grid > div::before {
+  content: "";
+
+  position: absolute;
+
+  top: -40px;
+  right: -40px;
+
+  width: 100px;
+  height: 100px;
+
+  background: rgba(229, 9, 20, 0.12);
+
+  border-radius: 50%;
+
+  filter: blur(25px);
+
+  opacity: 0;
+
+  transition: 0.3s ease;
+}
+
+
+
+.movie-details-grid > div::after {
+  content: "";
+
+  position: absolute;
+
+  top: 20px;
+  left: 0;
+
+  width: 3px;
+
+  height: 35px;
+
+  background: #e50914;
+
+  border-radius: 0 5px 5px 0;
+
+  opacity: 0;
+
+  transition: 0.3s ease;
+}
+
+
+
+.movie-details-grid > div:hover {
+  transform: translateY(-6px);
+
+  border-color:
+    rgba(229, 9, 20, 0.35);
+
+  box-shadow:
+    0 15px 40px
+    rgba(0, 0, 0, 0.35);
+}
+
+
+.movie-details-grid > div:hover::before {
+  opacity: 1;
+}
+
+
+.movie-details-grid > div:hover::after {
+  opacity: 1;
+}
+
+
+.movie-details-grid h4 {
+  margin: 0 0 10px;
+
+  color: #71717a;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+
+.movie-details-grid p {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  line-height: 1.5;
+}
+
+
+
+.movie-details-grid > div:nth-child(2) p {
+  color: #ff5c66;
+}
+
+
+@media (max-width: 1000px) {
+
+  .about-movie {
+    padding: 70px 20px;
+  }
+
+
+  .movie-details-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .about-movie {
+    padding: 60px 15px;
+  }
+
+
+  .about-container {
+    padding: 0 10px;
+  }
+
+
+  .about-container h2 {
+    font-size: 27px;
+
+    margin-bottom: 25px;
+  }
+
+
+  .about-container > p {
+    margin-bottom: 35px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  .movie-details-grid {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+
+  .movie-details-grid > div {
+    min-height: auto;
+
+    padding: 20px;
+  }
+
+
+  .movie-details-grid h4 {
+    font-size: 10px;
+  }
+
+
+  .movie-details-grid p {
+    font-size: 15px;
+  }
+
+}
+
+
+
+@media (max-width: 380px) {
+
+  .about-container h2 {
+    font-size: 24px;
+  }
+
+
+  .about-container > p {
+    font-size: 13px;
+  }
+
+}

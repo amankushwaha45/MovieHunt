@@ -1,0 +1,280 @@
+.dashboard-page {
+
+    min-height: 100vh;
+    padding: 40px;
+
+    background:
+    radial-gradient(
+        circle at top left,
+        rgba(128,0,32,0.25),
+        transparent 40%
+    ),
+    linear-gradient(
+        135deg,
+        #080808,
+        #151515
+    );
+
+    color: white;
+    font-family: "Inter", sans-serif;
+
+}
+
+
+
+/* TITLE */
+
+.dashboard-page h1 {
+
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    margin-bottom: 40px;
+
+    color: #f5f5f5;
+
+}
+
+
+
+/* CARDS CONTAINER */
+
+.stats-container {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(230px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+/* GLASS CARD */
+
+.stat-card {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+
+    padding:25px;
+
+
+    background:
+    rgba(255,255,255,0.07);
+
+
+    border:
+    1px solid rgba(255,255,255,0.12);
+
+
+    border-radius:22px;
+
+
+    backdrop-filter:blur(18px);
+
+
+    -webkit-backdrop-filter:blur(18px);
+
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,0.5);
+
+
+    transition:0.3s;
+
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+/* MAROON LIGHT EFFECT */
+
+.stat-card::before {
+
+    content:"";
+
+    position:absolute;
+
+    width:150px;
+
+    height:150px;
+
+
+    background:
+    rgba(128,0,32,0.35);
+
+
+    filter:blur(45px);
+
+
+    top:-50px;
+
+    right:-50px;
+
+
+}
+
+
+
+
+
+.stat-card:hover {
+
+
+    transform:translateY(-6px);
+
+
+    border-color:
+    rgba(183,110,121,0.5);
+
+
+    box-shadow:
+    0 25px 60px rgba(128,0,32,0.35);
+
+
+}
+
+
+
+
+
+/* ICON */
+
+.card-icon {
+
+
+    height:60px;
+
+    width:60px;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    font-size:26px;
+
+
+    border-radius:18px;
+
+
+
+    background:
+    linear-gradient(
+        135deg,
+        #3b0a12,
+        #7b1e2b
+    );
+
+
+
+    color:#ffd1d8;
+
+
+    box-shadow:
+    0 10px 30px rgba(128,0,32,0.4);
+
+
+}
+
+
+
+
+
+/* TEXT */
+
+
+.stat-card h3 {
+
+    margin:0;
+
+    font-size:15px;
+
+    color:#aaa;
+
+    font-weight:500;
+
+}
+
+
+
+
+.stat-card h2 {
+
+    margin-top:8px;
+
+    font-size:28px;
+
+    color:white;
+
+}
+
+
+
+
+
+
+/* LOADING */
+
+.loading {
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    background:#080808;
+
+
+    color:white;
+
+    font-size:25px;
+
+}
+
+
+
+
+
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+
+.dashboard-page{
+
+    padding:20px;
+
+}
+
+
+
+.dashboard-page h1{
+
+    font-size:26px;
+
+}
+
+
+}

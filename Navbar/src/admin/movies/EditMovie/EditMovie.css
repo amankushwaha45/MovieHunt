@@ -1,0 +1,747 @@
+/* =====================================
+   EDIT MOVIE PAGE
+   NETFLIX MAROON GLASS UI
+===================================== */
+
+
+.edit-movie-page{
+
+
+    min-height:100vh;
+
+
+    padding:40px;
+
+
+
+    color:white;
+
+
+
+    background:
+
+
+    radial-gradient(
+
+        circle at top left,
+
+        rgba(128,0,32,.35),
+
+        transparent 35%
+
+    ),
+
+
+
+    linear-gradient(
+
+        135deg,
+
+        #050505,
+
+        #111
+
+    );
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================
+        HEADER
+========================== */
+
+
+.edit-header{
+
+
+    display:flex;
+
+
+
+    align-items:center;
+
+
+
+    gap:25px;
+
+
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+
+
+
+
+.edit-header h1{
+
+
+    font-size:34px;
+
+
+
+    font-weight:800;
+
+
+
+    letter-spacing:1px;
+
+
+}
+
+
+
+
+
+
+
+.edit-header button{
+
+
+    display:flex;
+
+
+
+    align-items:center;
+
+
+
+    gap:10px;
+
+
+
+    padding:12px 22px;
+
+
+
+    border:none;
+
+
+
+    border-radius:15px;
+
+
+
+    color:white;
+
+
+
+    cursor:pointer;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.08);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.12);
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+
+
+.edit-header button:hover{
+
+
+    background:
+
+
+    rgba(128,0,32,.5);
+
+
+
+    transform:
+
+
+    translateX(-5px);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+        FORM GLASS CARD
+========================== */
+
+
+.movie-form{
+
+
+    max-width:800px;
+
+
+
+    padding:35px;
+
+
+
+    border-radius:30px;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.06);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.12);
+
+
+
+    backdrop-filter:
+
+
+    blur(25px);
+
+
+
+    -webkit-backdrop-filter:
+
+
+    blur(25px);
+
+
+
+    box-shadow:
+
+
+    0 30px 80px rgba(0,0,0,.8);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+        INPUTS
+========================== */
+
+
+.movie-form input,
+.movie-form textarea{
+
+
+    width:100%;
+
+
+
+    padding:16px 18px;
+
+
+
+    margin-bottom:18px;
+
+
+
+    border-radius:16px;
+
+
+
+    outline:none;
+
+
+
+    color:white;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.07);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.12);
+
+
+
+    font-size:15px;
+
+
+
+}
+
+
+
+
+
+
+
+.movie-form textarea{
+
+
+    height:130px;
+
+
+
+    resize:none;
+
+
+}
+
+
+
+
+
+
+
+.movie-form input::placeholder,
+.movie-form textarea::placeholder{
+
+
+    color:#999;
+
+
+}
+
+
+
+
+
+
+
+.movie-form input:focus,
+.movie-form textarea:focus{
+
+
+    border-color:#8b1e3f;
+
+
+
+    box-shadow:
+
+
+    0 0 20px rgba(128,0,32,.4);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+        OLD POSTER
+========================== */
+
+
+.old-poster{
+
+
+    width:180px;
+
+
+
+    height:260px;
+
+
+
+    object-fit:cover;
+
+
+
+    border-radius:20px;
+
+
+
+    margin:15px 0 25px;
+
+
+
+    border:
+
+
+    2px solid rgba(183,110,121,.4);
+
+
+
+    box-shadow:
+
+
+    0 20px 40px rgba(0,0,0,.6);
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+
+
+.old-poster:hover{
+
+
+    transform:
+
+
+    scale(1.05);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+        UPLOAD BOX
+========================== */
+
+
+.upload-box{
+
+
+    height:130px;
+
+
+
+    margin-bottom:20px;
+
+
+
+    border-radius:20px;
+
+
+
+    border:
+
+
+    2px dashed rgba(183,110,121,.5);
+
+
+
+    display:flex;
+
+
+
+    justify-content:center;
+
+
+
+    align-items:center;
+
+
+
+    gap:15px;
+
+
+
+    cursor:pointer;
+
+
+
+    color:#d8a0aa;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.04);
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+
+
+.upload-box:hover{
+
+
+    background:
+
+
+    rgba(128,0,32,.18);
+
+
+
+    border-color:#8b1e3f;
+
+
+}
+
+
+
+
+
+
+
+.upload-box input{
+
+
+    display:none;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+        SAVE BUTTON
+========================== */
+
+
+.save-btn{
+
+
+    width:100%;
+
+
+
+    padding:16px;
+
+
+
+    border:none;
+
+
+
+    border-radius:18px;
+
+
+
+    cursor:pointer;
+
+
+
+    color:white;
+
+
+
+    font-size:17px;
+
+
+
+    font-weight:700;
+
+
+
+    display:flex;
+
+
+
+    align-items:center;
+
+
+
+    justify-content:center;
+
+
+
+    gap:10px;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #3b0a12,
+
+        #8b1e3f
+
+    );
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+
+
+.save-btn:hover{
+
+
+    transform:
+
+
+    translateY(-5px);
+
+
+
+    box-shadow:
+
+
+    0 20px 45px rgba(128,0,32,.5);
+
+
+
+}
+
+
+
+
+
+
+
+.save-btn:disabled{
+
+
+    opacity:.6;
+
+
+
+    cursor:not-allowed;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+        RESPONSIVE
+========================== */
+
+
+@media(max-width:700px){
+
+
+
+.edit-movie-page{
+
+
+    padding:20px;
+
+
+}
+
+
+
+.edit-header{
+
+
+    flex-direction:column;
+
+
+    align-items:flex-start;
+
+
+}
+
+
+
+.edit-header h1{
+
+
+    font-size:26px;
+
+
+}
+
+
+
+.movie-form{
+
+
+    padding:20px;
+
+
+}
+
+
+
+.old-poster{
+
+
+    width:150px;
+
+
+    height:220px;
+
+
+}
+
+
+
+}

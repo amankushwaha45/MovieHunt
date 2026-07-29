@@ -1,0 +1,261 @@
+/* =====================================
+   ADMIN NAVBAR
+   NETFLIX GLASS STYLE
+===================================== */
+
+
+.admin-navbar{
+
+
+    height:85px;
+
+
+
+    display:flex;
+
+
+
+    align-items:center;
+
+
+
+    justify-content:space-between;
+
+
+
+    padding:0 35px;
+
+
+
+    position:sticky;
+
+
+
+    top:0;
+
+
+
+    z-index:50;
+
+
+
+    background:
+
+
+    rgba(5,5,5,.75);
+
+
+
+    border-bottom:
+
+
+    1px solid rgba(255,255,255,.08);
+
+
+
+    backdrop-filter:
+
+
+    blur(25px);
+
+
+
+}
+
+
+
+
+
+
+
+
+/* SEARCH */
+
+
+.search-box{
+
+
+    width:350px;
+
+
+
+    padding:14px 20px;
+
+
+
+    border-radius:18px;
+
+
+
+    outline:none;
+
+
+
+    color:white;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.06);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.12);
+
+
+}
+
+
+
+
+
+
+
+.search-box::placeholder{
+
+
+    color:#888;
+
+
+}
+
+
+
+
+
+
+
+.search-box:focus{
+
+
+    border-color:#8b1e3f;
+
+
+
+    box-shadow:
+
+
+    0 0 20px rgba(128,0,32,.35);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* PROFILE */
+
+
+.nav-profile{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:15px;
+
+
+
+    padding:10px 18px;
+
+
+
+    border-radius:18px;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.05);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.1);
+
+
+}
+
+
+
+
+
+.nav-profile img{
+
+
+    height:42px;
+
+
+    width:42px;
+
+
+    border-radius:50%;
+
+
+    object-fit:cover;
+
+
+}
+
+
+
+
+
+
+
+.nav-profile span{
+
+
+    color:#ddd;
+
+
+    font-size:14px;
+
+
+}
+
+
+
+
+
+@media(max-width:700px){
+
+
+
+.admin-navbar{
+
+
+    padding:0 15px;
+
+
+}
+
+
+
+.search-box{
+
+
+    width:180px;
+
+
+}
+
+
+
+}

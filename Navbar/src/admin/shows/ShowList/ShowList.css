@@ -1,0 +1,721 @@
+/* ======================================
+   SHOW LIST PAGE
+   NETFLIX MAROON GLASS UI
+====================================== */
+
+
+.show-page{
+
+
+    min-height:100vh;
+
+
+    padding:35px;
+
+
+    color:white;
+
+
+
+    background:
+
+
+    radial-gradient(
+
+        circle at top left,
+
+        rgba(128,0,32,.35),
+
+        transparent 35%
+
+    ),
+
+
+    linear-gradient(
+
+        135deg,
+
+        #050505,
+
+        #111
+
+    );
+
+
+}
+
+
+
+
+
+
+
+/* ==========================
+        HEADER
+========================== */
+
+
+.show-header{
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+
+
+
+
+.show-header h1{
+
+
+    font-size:34px;
+
+
+    font-weight:800;
+
+
+    margin:0;
+
+
+    letter-spacing:1px;
+
+
+}
+
+
+
+
+
+
+
+.show-header p{
+
+
+    color:#aaa;
+
+
+    margin-top:8px;
+
+
+}
+
+
+
+
+
+
+
+.show-header button{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:10px;
+
+
+    padding:14px 22px;
+
+
+
+    border:none;
+
+
+
+    border-radius:18px;
+
+
+
+    color:white;
+
+
+
+    cursor:pointer;
+
+
+
+    font-weight:600;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #3b0715,
+
+        #8b1e3f
+
+    );
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+
+
+.show-header button:hover{
+
+
+    transform:
+
+
+    translateY(-4px);
+
+
+
+    box-shadow:
+
+
+    0 15px 40px rgba(128,0,32,.5);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+        SEARCH
+========================== */
+
+
+.show-search{
+
+
+    width:100%;
+
+
+    max-width:500px;
+
+
+    padding:16px 20px;
+
+
+
+    margin-bottom:35px;
+
+
+
+    color:white;
+
+
+
+    outline:none;
+
+
+
+    border-radius:18px;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.06);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.15);
+
+
+}
+
+
+
+
+
+
+
+.show-search::placeholder{
+
+
+    color:#999;
+
+
+}
+
+
+
+
+
+
+
+.show-search:focus{
+
+
+    border-color:#8b1e3f;
+
+
+
+    box-shadow:
+
+
+    0 0 25px rgba(128,0,32,.4);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+        GRID
+========================== */
+
+
+.show-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+
+    repeat(auto-fit,minmax(280px,1fr));
+
+
+
+    gap:25px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+        CARD
+========================== */
+
+
+.show-card{
+
+
+    padding:25px;
+
+
+    border-radius:28px;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+        145deg,
+
+        rgba(255,255,255,.08),
+
+        rgba(255,255,255,.03)
+
+    );
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.12);
+
+
+
+    backdrop-filter:
+
+
+    blur(25px);
+
+
+
+    box-shadow:
+
+
+    0 25px 70px rgba(0,0,0,.7);
+
+
+
+    transition:.35s;
+
+
+}
+
+
+
+
+
+
+
+.show-card:hover{
+
+
+    transform:
+
+
+    translateY(-8px);
+
+
+
+    border-color:
+
+
+    rgba(183,110,121,.5);
+
+
+
+    box-shadow:
+
+
+    0 30px 80px rgba(128,0,32,.35);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+        TITLE
+========================== */
+
+
+.show-card h2{
+
+
+    font-size:22px;
+
+
+    margin-bottom:20px;
+
+
+    color:#ffd1d8;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+        INFO
+========================== */
+
+
+.show-card p{
+
+
+    color:#ddd;
+
+
+    margin:12px 0;
+
+
+    font-size:14px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+        ACTION BUTTONS
+========================== */
+
+
+.show-actions{
+
+
+    display:flex;
+
+
+    gap:12px;
+
+
+    margin-top:25px;
+
+
+}
+
+
+
+
+
+
+
+.edit-btn,
+.delete-btn{
+
+
+    height:42px;
+
+
+    width:42px;
+
+
+
+    border:none;
+
+
+
+    border-radius:12px;
+
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+
+    color:white;
+
+
+
+    cursor:pointer;
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+
+
+.edit-btn{
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #374151,
+
+        #6b7280
+
+    );
+
+
+}
+
+
+
+
+
+
+
+.delete-btn{
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #4b0710,
+
+        #8b1e3f
+
+    );
+
+
+}
+
+
+
+
+
+
+
+.edit-btn:hover,
+.delete-btn:hover{
+
+
+    transform:
+
+
+    translateY(-4px)
+    scale(1.08);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+        EMPTY
+========================== */
+
+
+.no-data{
+
+
+    text-align:center;
+
+
+    padding:50px;
+
+
+    color:#aaa;
+
+
+    font-size:20px;
+
+
+}
+
+
+
+
+
+
+
+
+.loading{
+
+
+    color:white;
+
+
+    text-align:center;
+
+
+    margin-top:100px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+        MOBILE
+========================== */
+
+
+@media(max-width:700px){
+
+
+.show-page{
+
+
+    padding:20px;
+
+
+}
+
+
+
+.show-header{
+
+
+    flex-direction:column;
+
+
+    align-items:flex-start;
+
+
+    gap:20px;
+
+
+}
+
+
+
+.show-header h1{
+
+
+    font-size:26px;
+
+
+}
+
+
+
+}

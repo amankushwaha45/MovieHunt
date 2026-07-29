@@ -1,0 +1,755 @@
+/* ======================================
+   THEATRE LIST
+   NETFLIX MAROON GLASS UI
+====================================== */
+
+
+.theatre-page{
+
+    min-height:100vh;
+
+    padding:35px;
+
+    color:white;
+
+
+    background:
+
+
+    radial-gradient(
+
+        circle at top left,
+
+        rgba(128,0,32,.25),
+
+        transparent 35%
+
+    ),
+
+
+    linear-gradient(
+
+        135deg,
+
+        #050505,
+
+        #111
+
+    );
+
+}
+
+
+
+
+
+
+
+/* ===========================
+        HEADER
+=========================== */
+
+
+.theatre-header{
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+
+
+
+.theatre-header h1{
+
+
+    font-size:34px;
+
+
+    margin:0;
+
+
+    font-weight:800;
+
+
+    letter-spacing:1px;
+
+
+}
+
+
+
+
+
+.theatre-header p{
+
+
+    color:#aaa;
+
+
+    margin-top:8px;
+
+
+}
+
+
+
+
+
+
+
+.theatre-header button{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:10px;
+
+
+    padding:14px 22px;
+
+
+    border:none;
+
+
+    border-radius:18px;
+
+
+    color:white;
+
+
+    font-size:15px;
+
+
+    font-weight:600;
+
+
+    cursor:pointer;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #3b0715,
+
+        #8b1e3f
+
+    );
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+
+
+.theatre-header button:hover{
+
+
+    transform:
+
+
+    translateY(-4px);
+
+
+
+    box-shadow:
+
+
+    0 15px 40px rgba(128,0,32,.5);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ===========================
+        SEARCH
+=========================== */
+
+
+.theatre-search{
+
+
+    width:100%;
+
+
+    max-width:500px;
+
+
+    padding:16px 20px;
+
+
+    margin-bottom:35px;
+
+
+    color:white;
+
+
+    outline:none;
+
+
+    border-radius:18px;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.06);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.15);
+
+
+
+    backdrop-filter:
+
+
+    blur(20px);
+
+
+
+    font-size:15px;
+
+
+}
+
+
+
+
+
+.theatre-search::placeholder{
+
+
+    color:#999;
+
+
+}
+
+
+
+
+
+
+.theatre-search:focus{
+
+
+    border-color:#8b1e3f;
+
+
+
+    box-shadow:
+
+
+    0 0 25px rgba(128,0,32,.4);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ===========================
+        GRID
+=========================== */
+
+
+.theatre-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+
+    repeat(auto-fit,minmax(280px,1fr));
+
+
+
+    gap:25px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ===========================
+        CARD
+=========================== */
+
+
+.theatre-card{
+
+
+    padding:25px;
+
+
+    border-radius:28px;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+        145deg,
+
+        rgba(255,255,255,.08),
+
+        rgba(255,255,255,.03)
+
+    );
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.12);
+
+
+
+    backdrop-filter:
+
+
+    blur(25px);
+
+
+
+    box-shadow:
+
+
+    0 25px 70px rgba(0,0,0,.7);
+
+
+
+    transition:.35s;
+
+
+}
+
+
+
+
+
+
+.theatre-card:hover{
+
+
+    transform:
+
+
+    translateY(-8px);
+
+
+
+    border-color:
+
+
+    rgba(183,110,121,.5);
+
+
+
+    box-shadow:
+
+
+    0 30px 80px rgba(128,0,32,.35);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ===========================
+        ICON
+=========================== */
+
+
+.theatre-icon{
+
+
+    width:65px;
+
+
+    height:65px;
+
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+
+    border-radius:20px;
+
+
+
+    font-size:28px;
+
+
+
+    color:#f0a0ad;
+
+
+
+    margin-bottom:20px;
+
+
+
+    background:
+
+
+    rgba(128,0,32,.25);
+
+
+}
+
+
+
+
+
+
+
+
+/* ===========================
+        INFO
+=========================== */
+
+
+.theatre-info h2{
+
+
+    font-size:22px;
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+
+
+.theatre-info p{
+
+
+    color:#ddd;
+
+
+    margin:10px 0;
+
+
+    font-size:14px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ===========================
+        ACTION BUTTONS
+=========================== */
+
+
+.theatre-actions{
+
+
+    display:flex;
+
+
+    gap:12px;
+
+
+    margin-top:25px;
+
+
+}
+
+
+
+
+
+
+
+.edit-btn,
+
+
+.delete-btn{
+
+
+    height:42px;
+
+
+    width:42px;
+
+
+
+    border:none;
+
+
+    border-radius:12px;
+
+
+    cursor:pointer;
+
+
+    color:white;
+
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+
+
+.edit-btn{
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #374151,
+
+        #6b7280
+
+    );
+
+
+}
+
+
+
+
+
+
+
+
+.delete-btn{
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #4b0710,
+
+        #8b1e3f
+
+    );
+
+
+}
+
+
+
+
+
+
+
+
+.edit-btn:hover,
+.delete-btn:hover{
+
+
+    transform:
+
+
+    translateY(-4px)
+    scale(1.08);
+
+
+}
+
+
+
+
+
+
+
+
+/* ===========================
+        NO DATA
+=========================== */
+
+
+.no-data{
+
+
+    padding:50px;
+
+
+    text-align:center;
+
+
+    color:#aaa;
+
+
+    font-size:20px;
+
+
+}
+
+
+
+
+
+
+
+.loading{
+
+
+    color:white;
+
+
+    text-align:center;
+
+
+    margin-top:100px;
+
+
+}
+
+
+
+
+
+
+
+
+/* ===========================
+        MOBILE
+=========================== */
+
+
+@media(max-width:700px){
+
+
+.theatre-page{
+
+
+    padding:20px;
+
+
+}
+
+
+
+.theatre-header{
+
+
+    flex-direction:column;
+
+
+    align-items:flex-start;
+
+
+    gap:20px;
+
+
+}
+
+
+
+.theatre-header h1{
+
+
+    font-size:26px;
+
+
+}
+
+
+
+}

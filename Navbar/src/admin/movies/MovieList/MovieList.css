@@ -1,0 +1,711 @@
+/* =====================================
+   MOVIE HUNT MOVIE MANAGEMENT
+   NETFLIX MAROON GLASS THEME
+===================================== */
+
+
+.movie-page{
+
+
+    min-height:100vh;
+
+
+    padding:35px;
+
+
+
+    color:white;
+
+
+
+    background:
+
+
+    radial-gradient(
+
+        circle at top left,
+
+        rgba(128,0,32,.35),
+
+        transparent 35%
+
+    ),
+
+
+
+    linear-gradient(
+
+        135deg,
+
+        #050505,
+
+        #111
+
+    );
+
+
+}
+
+
+
+
+
+
+/* ==========================
+        HEADER
+========================== */
+
+
+.movie-header{
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+.movie-header h1{
+
+
+    font-size:34px;
+
+
+    font-weight:800;
+
+
+    letter-spacing:1px;
+
+
+}
+
+
+
+
+
+
+
+
+.movie-header button{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:10px;
+
+
+
+    padding:14px 22px;
+
+
+
+    border:none;
+
+
+
+    border-radius:16px;
+
+
+
+    cursor:pointer;
+
+
+
+    color:white;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #3b0a12,
+
+        #8b1e3f
+
+    );
+
+
+
+    font-weight:600;
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+
+
+.movie-header button:hover{
+
+
+    transform:
+
+
+    translateY(-4px);
+
+
+
+    box-shadow:
+
+
+    0 15px 35px rgba(128,0,32,.5);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+        SEARCH
+========================== */
+
+
+.movie-search{
+
+
+    width:100%;
+
+
+
+    padding:16px 20px;
+
+
+
+    margin-bottom:35px;
+
+
+
+    outline:none;
+
+
+
+    color:white;
+
+
+
+    border-radius:18px;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.06);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.12);
+
+
+
+    backdrop-filter:
+
+
+    blur(15px);
+
+
+}
+
+
+
+
+
+
+
+.movie-search::placeholder{
+
+
+    color:#888;
+
+
+}
+
+
+
+
+
+
+
+
+.movie-search:focus{
+
+
+    border-color:#8b1e3f;
+
+
+
+    box-shadow:
+
+
+    0 0 20px rgba(128,0,32,.4);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+        MOVIE GRID
+========================== */
+
+
+.movie-grid{
+
+
+    display:grid;
+
+
+
+    grid-template-columns:
+
+
+    repeat(
+
+    auto-fit,
+
+    minmax(230px,1fr)
+
+    );
+
+
+
+    gap:25px;
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================
+        MOVIE CARD
+========================== */
+
+
+.movie-card{
+
+
+    overflow:hidden;
+
+
+
+    border-radius:25px;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.05);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.12);
+
+
+
+    backdrop-filter:
+
+
+    blur(20px);
+
+
+
+    box-shadow:
+
+
+    0 25px 60px rgba(0,0,0,.7);
+
+
+
+    transition:.35s;
+
+
+
+}
+
+
+
+
+
+
+
+
+.movie-card:hover{
+
+
+    transform:
+
+
+    translateY(-10px);
+
+
+
+    border-color:
+
+
+    rgba(183,110,121,.5);
+
+
+
+    box-shadow:
+
+
+    0 30px 70px rgba(128,0,32,.4);
+
+
+
+}
+
+
+
+
+
+
+
+
+/* POSTER */
+
+
+.movie-card img{
+
+
+    width:100%;
+
+
+    height:300px;
+
+
+
+    object-fit:cover;
+
+
+
+    transition:.4s;
+
+
+}
+
+
+
+
+
+
+
+.movie-card:hover img{
+
+
+    transform:
+
+
+    scale(1.05);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* INFO */
+
+
+.movie-info{
+
+
+    padding:20px;
+
+
+}
+
+
+
+.movie-info h2{
+
+
+    font-size:20px;
+
+
+
+    margin-bottom:10px;
+
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+
+.movie-info p{
+
+
+    color:#aaa;
+
+
+
+    margin:6px 0;
+
+
+
+    font-size:14px;
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================
+        ACTION BUTTONS
+========================== */
+
+
+.movie-actions{
+
+
+    display:flex;
+
+
+    gap:12px;
+
+
+
+    margin-top:20px;
+
+
+}
+
+
+
+
+
+
+
+
+.edit-btn,
+.delete-btn{
+
+
+    height:40px;
+
+
+    width:40px;
+
+
+
+    border:none;
+
+
+
+    border-radius:12px;
+
+
+
+    cursor:pointer;
+
+
+
+    color:white;
+
+
+
+    display:flex;
+
+
+
+    justify-content:center;
+
+
+
+    align-items:center;
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+
+
+.edit-btn{
+
+
+    background:
+
+
+    rgba(183,110,121,.35);
+
+
+}
+
+
+
+
+
+
+
+.delete-btn{
+
+
+    background:
+
+
+    rgba(128,0,32,.7);
+
+
+}
+
+
+
+
+
+
+
+
+.edit-btn:hover,
+.delete-btn:hover{
+
+
+    transform:
+
+
+    translateY(-4px)
+    scale(1.1);
+
+
+
+    box-shadow:
+
+
+    0 15px 30px rgba(128,0,32,.4);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+        MOBILE
+========================== */
+
+
+@media(max-width:700px){
+
+
+.movie-page{
+
+
+    padding:20px;
+
+
+}
+
+
+
+.movie-header{
+
+
+    flex-direction:column;
+
+
+    align-items:flex-start;
+
+
+    gap:20px;
+
+
+}
+
+
+
+.movie-header h1{
+
+
+    font-size:26px;
+
+
+}
+
+
+
+.movie-card img{
+
+
+    height:260px;
+
+
+}
+
+
+}

@@ -1,0 +1,372 @@
+/* ==========================================
+   PROFILE PAGE
+========================================== */
+
+.profile-page{
+    width:100%;
+    min-height:100vh;
+    background:#0f172a;
+    padding:30px;
+
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.profile-card{
+    background:#1e293b;
+    border-radius:15px;
+    padding:30px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+/* ==========================================
+   PROFILE AVATAR
+========================================== */
+
+.profile-avatar{
+    width:90px;
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#fff;
+
+    font-size:35px;
+}
+
+.profile-card h1{
+    text-align:center;
+    color:#fff;
+
+    margin-top:20px;
+}
+
+.role{
+    display:block;
+
+    text-align:center;
+
+    color:#60a5fa;
+
+    margin-top:8px;
+
+    font-weight:600;
+
+    text-transform:capitalize;
+}
+
+/* ==========================================
+   PROFILE INFO
+========================================== */
+
+.profile-info{
+
+    margin-top:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.profile-info div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.profile-info svg{
+
+    color:#60a5fa;
+
+    font-size:18px;
+
+}
+
+.profile-info span{
+
+    color:#fff;
+
+}
+
+.profile-info input{
+
+    flex:1;
+
+    background:#334155;
+
+    color:#fff;
+
+    border:none;
+
+    outline:none;
+
+    padding:12px;
+
+    border-radius:8px;
+
+}
+/* ==========================================
+   FORMS
+========================================== */
+
+.profile-card form{
+
+    margin-top:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.profile-card form input{
+
+    background:#334155;
+
+    color:#fff;
+
+    border:none;
+
+    outline:none;
+
+    padding:14px;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+}
+
+.profile-card form input::placeholder{
+
+    color:#cbd5e1;
+
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.save-btn{
+
+    border:none;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:14px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    transition:.3s;
+
+}
+
+.save-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+.logout-btn{
+
+    width:100%;
+
+    border:none;
+
+    background:#dc2626;
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.logout-btn:hover{
+
+    background:#b91c1c;
+
+}
+/* ==========================================
+   ADMIN TABLE
+========================================== */
+
+.admin-table{
+
+    overflow-x:auto;
+
+    margin-top:25px;
+
+}
+
+.admin-table table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.admin-table th{
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:14px;
+
+    text-align:left;
+
+}
+
+.admin-table td{
+
+    padding:14px;
+
+    border-bottom:1px solid #334155;
+
+    color:#fff;
+
+}
+
+.admin-table tr:hover{
+
+    background:#273449;
+
+}
+
+/* ==========================================
+   ROLE BADGE
+========================================== */
+
+.role-badge{
+
+    background:#16a34a;
+
+    color:white;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+   DELETE BUTTON
+========================================== */
+
+.delete-btn{
+
+    border:none;
+
+    background:#dc2626;
+
+    color:white;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    transition:.3s;
+
+}
+
+.delete-btn:hover{
+
+    background:#b91c1c;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+    .profile-page{
+
+        padding:15px;
+
+    }
+
+    .profile-card{
+
+        padding:20px;
+
+    }
+
+    .admin-table table{
+
+        min-width:700px;
+
+    }
+
+}

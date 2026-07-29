@@ -1,0 +1,1215 @@
+
+
+.premium-showtime-page {
+  min-height: 100vh;
+  padding-bottom: 80px;
+
+  background:
+    radial-gradient(
+      circle at 10% 0%,
+      rgba(229, 9, 20, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(100, 60, 255, 0.08),
+      transparent 30%
+    ),
+    #080808;
+
+  color: #ffffff;
+}
+
+
+
+
+.showtime-hero {
+  position: relative;
+
+  max-width: 1400px;
+  min-height: 420px;
+
+  margin: 0 auto;
+  padding: 80px 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 50px;
+
+  overflow: hidden;
+}
+
+
+
+.hero-glow {
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  top: -300px;
+  left: -150px;
+
+  background: rgba(229, 9, 20, 0.18);
+
+  filter: blur(120px);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 750px;
+}
+
+
+.hero-label {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color: #e50914;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+.hero-content h1 {
+  margin: 0;
+
+  font-size: clamp(45px, 5vw, 75px);
+
+  line-height: 1.05;
+
+  font-weight: 800;
+
+  letter-spacing: -3px;
+}
+
+
+
+
+.hero-content h1 span {
+  display: block;
+
+  margin-top: 8px;
+
+  background: linear-gradient(
+    90deg,
+    #e50914,
+    #ff3d5a,
+    #a855f7
+  );
+
+  background-clip: text;
+
+  color: transparent;
+}
+
+
+.hero-content p {
+  max-width: 550px;
+
+  margin-top: 25px;
+
+  color: #a1a1aa;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+
+
+.location-card {
+  position: relative;
+  z-index: 3;
+
+  min-width: 270px;
+
+  padding: 20px 22px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  background: rgba(255, 255, 255, 0.055);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 16px;
+
+  backdrop-filter: blur(20px);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.35);
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+
+.location-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(229, 9, 20, 0.5);
+
+  box-shadow:
+    0 20px 60px rgba(229, 9, 20, 0.12);
+}
+
+
+.location-icon {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(229, 9, 20, 0.12);
+
+  border-radius: 12px;
+
+  font-size: 20px;
+}
+
+
+.location-card div {
+  flex: 1;
+}
+
+
+.location-card small {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #71717a;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+
+.location-card strong {
+  color: #ffffff;
+
+  font-size: 15px;
+}
+
+
+.location-arrow {
+  color: #71717a;
+
+  font-size: 20px;
+
+  transition: 0.3s ease;
+}
+
+
+.location-card:hover .location-arrow {
+  color: #e50914;
+
+  transform: translateY(3px);
+}
+
+
+
+.premium-movie-info {
+  max-width: 1260px;
+
+  margin: 0 auto;
+
+  padding: 35px 50px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+
+.movie-eyebrow {
+  color: #e50914;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+.premium-movie-info h2 {
+  margin: 10px 0 14px;
+
+  font-size: 34px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+
+.movie-meta {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  color: #a1a1aa;
+
+  font-size: 14px;
+}
+
+
+
+.date-wrapper {
+  max-width: 1260px;
+
+  margin: 0 auto;
+
+  padding: 50px;
+}
+
+
+.section-heading span {
+  color: #e50914;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+.section-heading h3 {
+  margin: 8px 0 0;
+
+  color: #ffffff;
+
+  font-size: 24px;
+
+  font-weight: 650;
+}
+
+
+
+
+.date-scroll {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 28px;
+
+  overflow-x: auto;
+
+  padding: 5px 5px 15px;
+
+  scrollbar-width: none;
+}
+
+
+.date-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+.premium-date {
+  flex: 0 0 90px;
+
+  height: 110px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  background: #151515;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 14px;
+
+  color: #a1a1aa;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+
+.premium-date:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(229, 9, 20, 0.6);
+
+  color: #ffffff;
+}
+
+
+.premium-date span {
+  font-size: 12px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+}
+
+
+.premium-date strong {
+  color: #ffffff;
+
+  font-size: 28px;
+
+  font-weight: 700;
+}
+
+
+.premium-date small {
+  font-size: 11px;
+}
+
+
+.premium-date.active {
+  background:
+    linear-gradient(
+      145deg,
+      #e50914,
+      #b20710
+    );
+
+  border-color: transparent;
+
+  color: #ffffff;
+
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 12px 30px rgba(229, 9, 20, 0.25);
+}
+
+
+.premium-date.active strong {
+  color: #ffffff;
+}
+
+
+
+
+.premium-filter-bar {
+  max-width: 1160px;
+
+  margin: 0 auto 50px;
+
+  padding: 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+
+  background: #111111;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 15px 50px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+.filter-title {
+  min-width: 160px;
+
+  margin-right: 10px;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+.filter-title span {
+  color: #e50914;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+.filter-title strong {
+  margin-top: 5px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+}
+
+
+
+
+.premium-filter-bar select {
+  height: 46px;
+
+  min-width: 150px;
+
+  padding: 0 15px;
+
+  background: #1b1b1b;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 10px;
+
+  color: #ffffff;
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+
+.premium-filter-bar select:hover,
+.premium-filter-bar select:focus {
+  border-color: #e50914;
+
+  background: #202020;
+}
+
+
+.premium-filter-bar select option {
+  background: #181818;
+
+  color: #ffffff;
+}
+
+
+
+
+.reset-filters {
+  height: 46px;
+
+  padding: 0 20px;
+
+  background: transparent;
+
+  border: 1px solid rgba(229, 9, 20, 0.5);
+
+  border-radius: 10px;
+
+  color: #ff5c66;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+
+.reset-filters:hover {
+  background: #e50914;
+
+  color: #ffffff;
+
+  border-color: #e50914;
+
+  transform: translateY(-2px);
+}
+
+
+
+
+.results-section {
+  max-width: 1160px;
+
+  margin: 0 auto;
+}
+
+
+.results-header {
+  margin-bottom: 28px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+}
+
+
+.results-header span:first-child {
+  color: #e50914;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+.results-header h2 {
+  margin: 7px 0 0;
+
+  color: #ffffff;
+
+  font-size: 30px;
+
+  font-weight: 700;
+}
+
+
+.results-count {
+  color: #71717a;
+
+  font-size: 13px;
+}
+
+
+
+
+.premium-theatre-card {
+  position: relative;
+
+  margin-bottom: 22px;
+
+  padding: 30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.055),
+      rgba(255, 255, 255, 0.018)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 18px;
+
+  backdrop-filter: blur(18px);
+
+  transition: all 0.35s ease;
+}
+
+
+.premium-theatre-card:hover {
+  transform: translateY(-4px);
+
+  border-color:
+    rgba(229, 9, 20, 0.35);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+.theatre-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+
+.theatre-name-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+.theatre-name-row h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 21px;
+
+  font-weight: 700;
+}
+
+
+.verified {
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #e50914;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  font-size: 11px;
+}
+
+
+.theatre-header p {
+  margin: 9px 0 0;
+
+  color: #71717a;
+
+  font-size: 13px;
+}
+
+
+
+.favourite-btn {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  font-size: 23px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+
+.favourite-btn:hover {
+  color: #e50914;
+
+  border-color: #e50914;
+
+  transform: scale(1.08);
+}
+
+
+
+.premium-divider {
+  height: 1px;
+
+  margin: 24px 0;
+
+  background:
+    rgba(255, 255, 255, 0.07);
+}
+
+
+
+.show-movie-info h4 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 18px;
+
+  font-weight: 650;
+}
+
+
+.show-movie-info p {
+  margin: 8px 0 0;
+
+  color: #85858f;
+
+  font-size: 13px;
+}
+
+
+
+
+.showtimes-heading {
+  margin: 28px 0 15px;
+
+  color: #71717a;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+
+
+.premium-showtimes {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+
+.premium-showtime {
+  position: relative;
+
+  min-width: 135px;
+
+  padding: 14px 17px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 5px;
+
+  background: #171717;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 10px;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  transition: all 0.3s ease;
+}
+
+
+.premium-showtime::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(229, 9, 20, 0.2),
+      transparent
+    );
+
+  opacity: 0;
+
+  transition: 0.3s ease;
+}
+
+
+.premium-showtime:hover {
+  transform: translateY(-4px);
+
+  background: #1f1f1f;
+
+  border-color: #e50914;
+
+  box-shadow:
+    0 10px 30px rgba(229, 9, 20, 0.15);
+}
+
+
+.premium-showtime:hover::before {
+  opacity: 1;
+}
+
+
+.premium-showtime strong,
+.premium-showtime span,
+.premium-showtime small {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+.premium-showtime strong {
+  font-size: 16px;
+
+  font-weight: 700;
+}
+
+
+.premium-showtime span {
+  color: #ff5c66;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+.premium-showtime small {
+  color: #5fca91;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+
+
+
+.premium-empty {
+  min-height: 280px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  background: #111111;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 18px;
+}
+
+
+.empty-icon {
+  margin-bottom: 15px;
+
+  font-size: 42px;
+}
+
+
+.premium-empty h3 {
+  margin: 0;
+
+  font-size: 22px;
+}
+
+
+.premium-empty p {
+  margin: 8px 0 0;
+
+  color: #71717a;
+
+  font-size: 14px;
+}
+
+
+.premium-empty button {
+  margin-top: 22px;
+
+  padding: 12px 22px;
+
+  background: #e50914;
+
+  border: none;
+
+  border-radius: 8px;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+.premium-empty button:hover {
+  transform: translateY(-2px);
+
+  background: #f40612;
+
+  box-shadow:
+    0 10px 25px rgba(229, 9, 20, 0.3);
+}
+
+
+
+
+.showtime-loading {
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #080808;
+
+  color: #ffffff;
+
+  font-size: 18px;
+}
+
+
+
+.loader {
+  width: 38px;
+  height: 38px;
+
+  margin-bottom: 15px;
+
+  border: 3px solid rgba(255, 255, 255, 0.1);
+
+  border-top-color: #e50914;
+
+  border-radius: 50%;
+
+  animation:
+    premium-spin 0.8s linear infinite;
+}
+
+
+@keyframes premium-spin {
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+
+
+@media (max-width: 1100px) {
+
+  .showtime-hero {
+    padding: 70px 35px;
+  }
+
+
+  .premium-movie-info,
+  .date-wrapper {
+    padding-left: 35px;
+
+    padding-right: 35px;
+  }
+
+
+  .premium-filter-bar,
+  .results-section {
+    margin-left: 25px;
+
+    margin-right: 25px;
+  }
+
+}
+
+
+
+
+@media (max-width: 800px) {
+
+  .showtime-hero {
+    min-height: auto;
+
+    padding: 65px 30px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 35px;
+  }
+
+
+  .location-card {
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+
+
+  .premium-filter-bar {
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+
+  .filter-title {
+    margin-bottom: 5px;
+  }
+
+
+  .premium-filter-bar select,
+  .reset-filters {
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+
+
+  .results-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+}
+
+
+
+
+@media (max-width: 600px) {
+
+  .showtime-hero {
+    padding: 55px 20px 45px;
+  }
+
+
+  .hero-content h1 {
+    font-size: 42px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .hero-content p {
+    font-size: 14px;
+
+    line-height: 1.6;
+  }
+
+
+  .premium-movie-info,
+  .date-wrapper {
+    padding: 35px 20px;
+  }
+
+
+  .premium-movie-info h2 {
+    font-size: 27px;
+  }
+
+
+  .premium-filter-bar,
+  .results-section {
+    margin-left: 15px;
+
+    margin-right: 15px;
+  }
+
+
+  .premium-filter-bar {
+    padding: 18px;
+  }
+
+
+  .premium-theatre-card {
+    padding: 22px 18px;
+
+    border-radius: 16px;
+  }
+
+
+  .theatre-name-row h3 {
+    font-size: 17px;
+  }
+
+
+  .theatre-header p {
+    max-width: 230px;
+
+    line-height: 1.5;
+  }
+
+
+  .premium-showtimes {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .premium-showtime {
+    min-width: 0;
+
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+
+
+  .results-header h2 {
+    font-size: 25px;
+  }
+
+
+  .premium-date {
+    flex-basis: 80px;
+
+    height: 100px;
+  }
+
+}
+
+
+
+
+@media (max-width: 380px) {
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+
+  .premium-showtimes {
+    grid-template-columns: 1fr;
+  }
+
+
+  .premium-showtime {
+    width: 100%;
+  }
+
+}

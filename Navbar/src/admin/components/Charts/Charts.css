@@ -1,0 +1,145 @@
+/* ==========================
+   NETFLIX GLASS CHARTS
+========================== */
+
+
+.charts-container{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(350px,1fr));
+
+
+
+    gap:25px;
+
+
+
+    margin-top:40px;
+
+
+}
+
+
+
+
+
+
+
+.chart-card{
+
+
+    padding:25px;
+
+
+
+    border-radius:25px;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.05);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.12);
+
+
+
+    backdrop-filter:
+
+
+    blur(20px);
+
+
+
+    box-shadow:
+
+
+    0 25px 60px rgba(0,0,0,.7);
+
+
+}
+
+
+
+
+
+
+
+.chart-card h2{
+
+
+    color:white;
+
+
+
+    font-size:20px;
+
+
+
+    margin-bottom:20px;
+
+
+
+    letter-spacing:.5px;
+
+
+}
+
+
+
+
+
+
+.recharts-tooltip-wrapper{
+
+
+    outline:none;
+
+
+}
+
+
+
+.recharts-default-tooltip{
+
+
+    background:#111 !important;
+
+
+    border:
+
+    1px solid #6b2737 !important;
+
+
+
+    border-radius:12px;
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+.charts-container{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+}

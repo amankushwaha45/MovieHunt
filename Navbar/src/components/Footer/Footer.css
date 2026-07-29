@@ -1,0 +1,540 @@
+
+.moviehunt-footer{
+
+
+    width:100%;
+
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #0f0f0f,
+
+    #181818
+
+    );
+
+
+    color:white;
+
+
+    padding:50px 8% 25px;
+
+
+    border-top:
+
+    1px solid rgba(255,255,255,.1);
+
+
+    box-shadow:
+
+    0 -10px 40px rgba(0,0,0,.4);
+
+
+}
+
+
+
+
+
+
+
+.moviehunt-footer-top{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(220px,1fr));
+
+
+    gap:35px;
+
+
+    margin-bottom:45px;
+
+
+}
+
+
+
+
+
+
+.moviehunt-footer-section h4{
+
+
+    font-size:18px;
+
+
+    margin-bottom:18px;
+
+
+    color:#f84464;
+
+
+    font-weight:700;
+
+
+}
+
+
+
+
+
+
+.moviehunt-footer-links{
+
+
+    display:flex;
+
+
+    flex-wrap:wrap;
+
+
+    gap:8px;
+
+
+    color:#ccc;
+
+
+    font-size:14px;
+
+
+    line-height:1.8;
+
+
+}
+
+
+
+
+
+
+.moviehunt-footer-links span{
+
+
+    cursor:pointer;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+.moviehunt-footer-links span:hover{
+
+
+    color:#f84464;
+
+
+}
+
+
+
+
+
+
+.moviehunt-footer-divider{
+
+
+    color:#777;
+
+
+}
+
+
+
+
+
+
+
+
+
+.moviehunt-footer-brand{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    gap:20px;
+
+
+    margin:35px 0;
+
+
+}
+
+
+
+
+
+
+.moviehunt-footer-brand h2{
+
+
+    font-size:38px;
+
+
+    font-weight:800;
+
+
+    letter-spacing:2px;
+
+
+    text-transform:uppercase;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+    135deg,
+
+    #f84464,
+
+    #ffb000
+
+    );
+
+
+
+    background-clip:text;
+
+
+    color:transparent;
+
+
+}
+
+
+
+
+
+
+
+
+.moviehunt-footer-line{
+
+
+    height:1px;
+
+
+    flex:1;
+
+
+    background:
+
+    rgba(255,255,255,.2);
+
+
+}
+
+
+
+
+
+.moviehunt-footer-social{
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    gap:22px;
+
+
+    margin:30px 0;
+
+
+}
+
+
+
+
+
+
+.moviehunt-footer-social a{
+
+
+    width:45px;
+
+
+    height:45px;
+
+
+    border-radius:50%;
+
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+
+    color:white;
+
+
+
+    font-size:22px;
+
+
+
+    text-decoration:none;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.08);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.15);
+
+
+
+    backdrop-filter:
+
+    blur(10px);
+
+
+
+    transition:.35s;
+
+
+}
+
+
+
+
+
+
+.moviehunt-footer-social a:hover{
+
+
+    background:#f84464;
+
+
+
+    color:white;
+
+
+
+    transform:
+
+
+    translateY(-6px)
+
+    scale(1.15);
+
+
+
+    box-shadow:
+
+
+    0 10px 30px rgba(248,68,100,.5);
+
+
+}
+
+
+
+
+
+
+
+
+.moviehunt-footer-copy{
+
+
+    text-align:center;
+
+
+
+    border-top:
+
+
+    1px solid rgba(255,255,255,.1);
+
+
+
+    padding-top:25px;
+
+
+
+    color:#aaa;
+
+
+
+    font-size:13px;
+
+
+
+    line-height:1.8;
+
+
+}
+
+
+
+
+
+
+.moviehunt-footer-copy p{
+
+
+    margin:5px 0;
+
+
+}
+
+
+
+
+
+
+
+
+@media(max-width:768px){
+
+
+.moviehunt-footer{
+
+
+    padding:40px 20px 20px;
+
+
+}
+
+
+
+
+.moviehunt-footer-brand h2{
+
+
+    font-size:28px;
+
+
+}
+
+
+
+
+.moviehunt-footer-top{
+
+
+    grid-template-columns:1fr;
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+.moviehunt-footer-links{
+
+
+    justify-content:center;
+
+
+}
+
+
+
+
+.moviehunt-footer-social{
+
+
+    gap:15px;
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+@media(max-width:480px){
+
+
+
+.moviehunt-footer-brand{
+
+
+    gap:10px;
+
+
+}
+
+
+
+
+.moviehunt-footer-brand h2{
+
+
+    font-size:22px;
+
+
+}
+
+
+
+
+.moviehunt-footer-social a{
+
+
+    width:40px;
+
+
+    height:40px;
+
+
+    font-size:18px;
+
+
+}
+
+
+
+}

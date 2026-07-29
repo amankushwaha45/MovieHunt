@@ -1,0 +1,722 @@
+
+
+
+.booking-page{
+
+
+    min-height:100vh;
+
+
+    padding:35px;
+
+
+    color:white;
+
+
+
+    background:
+
+
+    radial-gradient(
+
+        circle at top left,
+
+        rgba(128,0,32,.35),
+
+        transparent 35%
+
+    ),
+
+
+
+    linear-gradient(
+
+        135deg,
+
+        #050505,
+
+        #111
+
+    );
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.booking-header{
+
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+.booking-header h1{
+
+
+    font-size:34px;
+
+
+    font-weight:800;
+
+
+    margin:0;
+
+
+    letter-spacing:1px;
+
+
+}
+
+
+
+.booking-header p{
+
+
+    color:#aaa;
+
+
+    margin-top:8px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.booking-table-box{
+
+
+    width:100%;
+
+
+    overflow-x:auto;
+
+
+    padding:30px;
+
+
+
+    border-radius:28px;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+        145deg,
+
+        rgba(255,255,255,.08),
+
+        rgba(255,255,255,.03)
+
+    );
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.12);
+
+
+
+    backdrop-filter:
+
+
+    blur(25px);
+
+
+
+    box-shadow:
+
+
+    0 30px 80px rgba(0,0,0,.8);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.booking-table-box table{
+
+
+    width:100%;
+
+
+    border-collapse:collapse;
+
+
+}
+
+
+
+
+
+.booking-table-box th{
+
+
+    padding:18px;
+
+
+    text-align:left;
+
+
+    color:#f2b3bd;
+
+
+    font-size:13px;
+
+
+    text-transform:uppercase;
+
+
+    letter-spacing:1px;
+
+
+
+    border-bottom:
+
+
+    1px solid rgba(255,255,255,.15);
+
+
+}
+
+
+
+
+
+
+
+
+.booking-table-box td{
+
+
+    padding:18px;
+
+
+    color:#ddd;
+
+
+    border-bottom:
+
+
+    1px solid rgba(255,255,255,.08);
+
+
+}
+
+
+
+
+
+
+
+
+.booking-table-box tbody tr{
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+
+
+.booking-table-box tbody tr:hover{
+
+
+    background:
+
+
+    rgba(128,0,32,.15);
+
+
+}
+
+
+
+
+
+
+
+
+
+td small{
+
+
+    color:#999;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.paid,
+.confirmed{
+
+
+    display:inline-block;
+
+
+    padding:7px 15px;
+
+
+    border-radius:30px;
+
+
+
+    font-size:12px;
+
+
+    font-weight:700;
+
+
+    color:#4ade80;
+
+
+
+    background:
+
+
+    rgba(34,197,94,.15);
+
+
+
+    border:
+
+
+    1px solid rgba(34,197,94,.3);
+
+
+}
+
+
+
+
+
+
+
+
+.pending{
+
+
+    display:inline-block;
+
+
+    padding:7px 15px;
+
+
+    border-radius:30px;
+
+
+
+    font-size:12px;
+
+
+    font-weight:700;
+
+
+
+    color:#facc15;
+
+
+
+    background:
+
+
+    rgba(234,179,8,.15);
+
+
+
+    border:
+
+
+    1px solid rgba(234,179,8,.3);
+
+
+}
+
+
+
+
+
+
+
+
+.failed,
+.cancelled{
+
+
+    display:inline-block;
+
+
+    padding:7px 15px;
+
+
+    border-radius:30px;
+
+
+
+    font-size:12px;
+
+
+    font-weight:700;
+
+
+
+    color:#ff6b6b;
+
+
+
+    background:
+
+
+    rgba(239,68,68,.15);
+
+
+
+    border:
+
+
+    1px solid rgba(239,68,68,.3);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.confirm-btn,
+.cancel-btn,
+.delete-btn{
+
+
+    height:38px;
+
+
+    width:38px;
+
+
+
+    border:none;
+
+
+
+    border-radius:12px;
+
+
+
+    cursor:pointer;
+
+
+
+    color:white;
+
+
+
+    margin-right:8px;
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+
+
+.confirm-btn{
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #166534,
+
+        #22c55e
+
+    );
+
+
+}
+
+
+
+
+
+
+
+
+.cancel-btn{
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #854d0e,
+
+        #eab308
+
+    );
+
+
+}
+
+
+
+
+
+
+
+
+.delete-btn{
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #4b0710,
+
+        #8b1e3f
+
+    );
+
+
+}
+
+
+
+
+
+
+
+
+.confirm-btn:hover,
+.cancel-btn:hover,
+.delete-btn:hover{
+
+
+    transform:
+
+
+    translateY(-4px)
+    scale(1.08);
+
+
+
+    box-shadow:
+
+
+    0 15px 30px rgba(128,0,32,.4);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.booking-table-box td[colspan]{
+
+
+    text-align:center;
+
+
+    padding:50px;
+
+
+    color:#aaa;
+
+
+    font-size:18px;
+
+
+}
+
+
+
+
+
+
+
+
+
+.loading{
+
+
+    color:white;
+
+
+    text-align:center;
+
+
+    margin-top:100px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.booking-table-box::-webkit-scrollbar{
+
+
+    height:8px;
+
+
+}
+
+
+
+.booking-table-box::-webkit-scrollbar-thumb{
+
+
+    background:#8b1e3f;
+
+
+    border-radius:20px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:700px){
+
+
+.booking-page{
+
+
+    padding:20px;
+
+
+}
+
+
+
+.booking-header h1{
+
+
+    font-size:26px;
+
+
+}
+
+
+
+.booking-table-box{
+
+
+    padding:15px;
+
+
+}
+
+
+
+.booking-table-box th,
+.booking-table-box td{
+
+
+    padding:12px;
+
+
+    font-size:13px;
+
+
+}
+
+
+
+}

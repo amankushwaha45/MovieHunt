@@ -1,0 +1,64 @@
+.movie-banner {
+  width: 100%;
+  min-height: 550px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.movie-banner-content {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  color: white;
+  align-items: center;
+}
+
+.movie-banner-poster img {
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0,0,0,.5);
+}
+
+.movie-banner-info {
+  flex: 1;
+}
+
+.movie-banner-info h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+}
+
+.movie-rating {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.movie-tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.movie-tags span {
+  background: rgba(255,255,255,.15);
+  padding: 8px 18px;
+  border-radius: 30px;
+}
+
+.movie-extra {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.book-btn {
+  padding: 15px 40px;
+  border: none;
+  border-radius: 8px;
+  background: #f84464;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}

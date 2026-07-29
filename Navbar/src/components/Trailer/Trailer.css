@@ -1,0 +1,19 @@
+.trailer-section {
+  padding: 60px 0;
+  background: #000000;
+}
+
+.trailer-container {
+  width: 1200px;
+  margin: auto;
+}
+
+.trailer-container h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.trailer-video {
+  border-radius: 12px;
+  overflow: hidden;
+}

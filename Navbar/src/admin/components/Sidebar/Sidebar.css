@@ -1,0 +1,412 @@
+/* =====================================
+   MOVIE HUNT ADMIN SIDEBAR
+   NETFLIX MAROON GLASS THEME
+===================================== */
+
+
+.admin-sidebar{
+
+
+    width:270px;
+
+
+    height:100vh;
+
+
+    position:fixed;
+
+
+    left:0;
+
+
+    top:0;
+
+
+
+    padding:25px 20px;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+        180deg,
+
+        rgba(20,20,20,.95),
+
+        rgba(5,5,5,.95)
+
+    );
+
+
+
+    border-right:
+
+
+    1px solid rgba(255,255,255,.08);
+
+
+
+    backdrop-filter:
+
+
+    blur(25px);
+
+
+
+    z-index:100;
+
+
+
+}
+
+
+
+
+
+
+/* LOGO */
+
+
+.admin-logo{
+
+
+    font-size:30px;
+
+
+    font-weight:900;
+
+
+    letter-spacing:1px;
+
+
+    margin-bottom:40px;
+
+
+    color:white;
+
+
+}
+
+
+
+.admin-logo span{
+
+
+    color:#8b1e3f;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* MENU */
+
+
+.sidebar-menu{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:12px;
+
+
+}
+
+
+
+
+
+
+
+
+.sidebar-menu a{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:15px;
+
+
+
+    padding:15px 18px;
+
+
+
+    border-radius:16px;
+
+
+
+    color:#aaa;
+
+
+
+    font-size:15px;
+
+
+    font-weight:500;
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+
+
+.sidebar-menu a svg{
+
+
+    font-size:18px;
+
+
+}
+
+
+
+
+
+
+
+
+.sidebar-menu a:hover{
+
+
+    color:white;
+
+
+
+    background:
+
+
+    rgba(128,0,32,.25);
+
+
+
+    transform:
+
+
+    translateX(5px);
+
+
+}
+
+
+
+
+
+
+
+
+.sidebar-menu a.active{
+
+
+    color:white;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+    135deg,
+
+    #3b0a12,
+
+    #8b1e3f
+
+    );
+
+
+
+    box-shadow:
+
+
+    0 15px 35px rgba(128,0,32,.4);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* LOGOUT */
+
+
+.logout-side-btn{
+
+
+    margin-top:30px;
+
+
+
+    width:100%;
+
+
+
+    padding:15px;
+
+
+
+    display:flex;
+
+
+
+    align-items:center;
+
+
+
+    justify-content:center;
+
+
+
+    gap:10px;
+
+
+
+    border:none;
+
+
+
+    border-radius:16px;
+
+
+
+    cursor:pointer;
+
+
+
+    color:white;
+
+
+
+    background:
+
+
+    rgba(128,0,32,.55);
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+
+
+
+.logout-side-btn:hover{
+
+
+    background:
+
+
+    rgba(128,0,32,.85);
+
+
+
+    transform:
+
+
+    translateY(-3px);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:900px){
+
+
+
+.admin-sidebar{
+
+
+    width:80px;
+
+
+}
+
+
+
+.admin-logo{
+
+
+    font-size:18px;
+
+
+}
+
+
+
+.sidebar-menu a{
+
+
+    justify-content:center;
+
+
+}
+
+
+
+.sidebar-menu a{
+
+
+    font-size:0;
+
+
+}
+
+
+
+.logout-side-btn{
+
+
+    font-size:0;
+
+
+}
+
+
+
+}
